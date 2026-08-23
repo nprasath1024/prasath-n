@@ -9,13 +9,13 @@ const settings = {
 
 //Home Page
 const greeting = {
-  title: "Hello.",
+  title: "Hello",
   title2: "Prasath",
   logo_name: "Prasath N",
   nickname: " ",
   full_name: "Prasath Narayanasamy",
   subTitle:
-    "Full Stack Developer, Machine Learning Enthusiast. Always learning.",
+    "Test MEssage here.",
   resumeLink:
     "https://drive.google.com/file/d/1kcvW8P65jWZFeKR6Jopf3nrQLA1qJCwn/view?usp=sharing",
   mail: "mailto:hrishipatel99@gmail.com",
