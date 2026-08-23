@@ -2,7 +2,7 @@
   "private": true,
   "name": "opportfolio",
   "version": "1.2.0",
-  "homepage": "http://hrishi.tech/",
+  "homepage": "https://nprasath1024.github.io/prasath-n/",
   "scripts": {
     "build": "react-scripts build",
     "predeploy": "npm run build",
