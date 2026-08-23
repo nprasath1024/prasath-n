@@ -10,7 +10,7 @@ const settings = {
 //Home Page
 const greeting = {
   title: "Hello.",
-  title2: "Hrishi",
+  title2: "Prasath",
   logo_name: "Prasath N",
   nickname: " ",
   full_name: "Prasath Narayanasamy",
@@ -25,7 +25,7 @@ const socialMediaLinks = {
   /* Your Social Media Link */
   github: "https://github.com/hrishi1999",
   linkedin: "https://www.linkedin.com/in/hrishi-patel-ba8476140/",
-  gmail: "hrishipatel99@gmail.com",
+  gmail: "n.prasath1024@gmail.com",
   gitlab: " ",
   facebook: " ",
   twitter: "https://twitter.com/hrishi_55",
