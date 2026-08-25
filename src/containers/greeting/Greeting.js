@@ -41,7 +41,14 @@ export default function Greeting(props) {
                   href="https://cardynale.com/profile/rLTJFzbMczGhWfPPrdKg_RNWrP9/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ display: "inline-block", textDecoration: "none", marginLeft: "65px" }}
+                  style={{ 
+                    display: "inline-block", 
+                    textDecoration: "none", 
+                    width: "285px", 
+                    textAlign: "center", 
+                    marginLeft: "0px", 
+                    boxSizing: "border-box" 
+                  }}
                 >
                   <i className="fa fa-download" aria-hidden="true"></i> vCard
                 </a>

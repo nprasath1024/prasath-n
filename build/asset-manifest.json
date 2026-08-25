@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/prasath-n/static/css/main.6be759af.css",
-    "main.js": "/prasath-n/static/js/main.2b92999b.js",
+    "main.js": "/prasath-n/static/js/main.f587e6c7.js",
     "static/media/fa-solid-900.svg": "/prasath-n/static/media/fa-solid-900.33f11e8e33e406b0dc21.svg",
     "static/media/fa-brands-400.svg": "/prasath-n/static/media/fa-brands-400.5f2a2f236048660df440.svg",
+    "static/media/prasath_profile.jpg": "/prasath-n/static/media/prasath_profile.bbcad299d0e9059a1d2a.jpg",
     "static/media/Montserrat-Regular.ttf": "/prasath-n/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
     "static/media/alagappa.png": "/prasath-n/static/media/alagappa.cb6ed5e18637818826a6.png",
     "static/media/ino.png": "/prasath-n/static/media/ino.adcd3743af4c9c5e57b5.png",
@@ -49,10 +50,10 @@
     "static/media/buld.jpg": "/prasath-n/static/media/buld.55444b9789a64f32e2e5.jpg",
     "index.html": "/prasath-n/index.html",
     "main.6be759af.css.map": "/prasath-n/static/css/main.6be759af.css.map",
-    "main.2b92999b.js.map": "/prasath-n/static/js/main.2b92999b.js.map"
+    "main.f587e6c7.js.map": "/prasath-n/static/js/main.f587e6c7.js.map"
   },
   "entrypoints": [
     "static/css/main.6be759af.css",
-    "static/js/main.2b92999b.js"
+    "static/js/main.f587e6c7.js"
   ]
 }
