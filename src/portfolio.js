@@ -15,21 +15,20 @@ const greeting = {
   nickname: " ",
   full_name: "Prasath Narayanasamy",
   subTitle:
-    "Test MEssage here.",
+    "ETL & Data Integration Specialist | 8+ Years in IT, 7+ in Informatica | AI Enthusiast",
   resumeLink:
     "https://drive.google.com/file/d/1kcvW8P65jWZFeKR6Jopf3nrQLA1qJCwn/view?usp=sharing",
-  mail: "mailto:hrishipatel99@gmail.com",
+  mail: "mailto:n.prasath1024@gmail.com",
 };
 
 const socialMediaLinks = {
-  /* Your Social Media Link */
-  github: "https://github.com/hrishi1999",
-  linkedin: "https://www.linkedin.com/in/hrishi-patel-ba8476140/",
+  github: "https://github.com/nprasath1024",
+  linkedin: "https://www.linkedin.com/in/prasath1024",
   gmail: "n.prasath1024@gmail.com",
   gitlab: " ",
-  facebook: " ",
-  twitter: "https://twitter.com/hrishi_55",
-  instagram: "https://www.instagram.com/picleric/",
+  facebook: "https://www.facebook.com/share/1D36ZgJoZ4/",
+  twitter: " ",
+  instagram: "https://www.instagram.com/iam__prasath",
 };
 
 const skills = {
@@ -322,30 +321,40 @@ const skills = {
 const degrees = {
   degrees: [
     {
-      title: "Dalhousie University",
-      subtitle: "Masters in Applied Computer Science",
-      logo_path: "dal.png",
-      alt_name: "DAL",
-      duration: "2022 - 2023",
-      descriptions: [
-        "⚡ Studied Advanced Software Development Concepts, Data Management & Warehousing",
-        "⚡ Learn Advanced Topics in Cloud Computing, Cloud Architecture along with Serverless Computing",
-        "⚡ Worked on projects on courses like Mobile Computing and Web Technologies.",
-      ],
-      website_link: "https://www.dal.ca/",
+      title: "Alagappa University",
+      subtitle: "MBA (Production & Operations Management)",
+      logo_path: "alagappa.png",
+      alt_name: "Alagappa University",
+      duration: "2018",
+      descriptions: ["⚡ Alagappa University, Karaikudi, Tamil Nadu"],
+      website_link: " ",
     },
     {
-      title: "SAL Engineering and Technical Institute",
-      subtitle: "B.Tech. in Computer Engineering",
-      logo_path: "sal.png",
-      alt_name: "SETI",
-      duration: "2017 - 2021",
-      descriptions: [
-        "⚡ I have studied core subjects like Data Structures, DBMS, Networking, Security, etc.",
-        "⚡ I have also completed various online courses for ML/DL, Web Development, Mobile App Development, etc.",
-        "⚡ I have implemented several projects based on what I've learnt under my Computer Engineering course. ",
-      ],
-      website_link: "https://www.sal.edu.in/",
+      title: "Sri Ramanujar Engineering College",
+      subtitle: "B.E.",
+      logo_path: "sriramanujar.png",
+      alt_name: "Sri Ramanujar Engineering College",
+      duration: "2014",
+      descriptions: ["⚡ Affiliated to Anna University, Chennai"],
+      website_link: " ",
+    },
+    {
+      title: "Gandhi Matric. Higher Secondary School",
+      subtitle: "12th (HSC)",
+      logo_path: "gandhi.png",
+      alt_name: "Gandhi Matric. Higher Secondary School",
+      duration: "2010",
+      descriptions: ["⚡ Tamil Nadu Board of Secondary Education"],
+      website_link: " ",
+    },
+    {
+      title: "Gandhi Matric. Higher Secondary School",
+      subtitle: "10th (SSLC)",
+      logo_path: "gandhi.png",
+      alt_name: "Gandhi Matric. Higher Secondary School",
+      duration: "2008",
+      descriptions: ["⚡ Tamil Nadu Matriculation Board"],
+      website_link: " ",
     },
   ],
 };
@@ -487,162 +496,33 @@ const certifications = {
 // Experience Page
 const experience = {
   title: "Experience",
-  subtitle: "Work, Internship and Volunteership",
+  subtitle: "Work Experience",
   description:
-    "I've completed two internships. I've mostly done projects on my own and I am actively looking for internships. I love organizing workshops to share my knowledge with others.",
+    "ETL and Data Integration Specialist with 8+ years of IT experience and over 7 years of expertise in Informatica PowerCenter, PowerExchange, and IDMC/IICS. Skilled in Oracle PL/SQL, data warehousing, Unix scripting, and Agile delivery. Experienced in leveraging AI tools such as Claude and GitHub Copilot to enhance development productivity, automate repetitive tasks, and accelerate solution delivery. Passionate about building reliable, scalable, and business-focused data integration solutions.",
   header_image_path: "experience.svg",
   sections: [
     {
       title: "Work",
       experiences: [
         {
-          title: "CS2 - IT Developer/Analyst",
-          company: "Canada Revenue Agency",
-          company_url: "https://www.canada.ca/en/revenue-agency.html",
-          logo_path: "cra.png",
-          duration: "May 2023 - Present",
-          location: "Halifax, Nova Scotia",
-          description:
-            "• Led development to concurrently process tax returns for multiple fiscal years, reducing system processing time by 35%\n" +
-            "• Implemented new tax return types and led development of T3 returns, resolving 25+ critical production issues\n" +
-            "• Collaborated across 5+ cross-functional teams to integrate tax law changes, ensuring 100% compliance\n" +
-            "• Mentored 4 team members and led code review sessions, enhancing team knowledge sharing",
-          color: "#f10000",
-        },
-        {
-          title: "Full Stack Developer - Part-time Contract",
-          company: "SpatialCut",
-          company_url: "",
-          logo_path: "spatialcut.png",
-          duration: "April 2024 - Present",
-          location: "Remote",
-          description:
-            "• Architected AWS cloud infrastructure, reducing complexity by 40% and improving scalability\n" +
-            "• Developed microservices using AWS SageMaker, ECS, and EC2 Mac Instances for Apple Vision Pro platform\n" +
-            "• Optimized video processing pipeline, reducing rendering time by 25%",
-          color: "#2962FF",
-        },
-        {
-          title: "Full Stack Developer",
-          company: "Quicko",
-          company_url: "https://quicko.com/",
-          logo_path: "quicko.jpg",
-          duration: "June 2021 - October 2021",
-          location: "Ahmedabad",
-          description:
-            "• Developed PWA with Flutter serving 50,000+ customers\n" +
-            "• Integrated 5+ brokerages including Zerodha, Upstox, Groww\n" +
-            "• Implemented backend APIs using Node.js and Spring Boot, reducing operational costs by 20%\n" +
-            "• Created responsive frontend using Angular and Vue.js",
-          color: "#2962FF",
-        },
-        {
-          title: "Python Developer",
-          company: "Google Summer of Code - Sugar Labs",
-          company_url: "https://sugarlabs.org/",
-          logo_path: "google_logo.png",
-          duration: "May 2019 - August 2019",
-          location: "Remote",
-          description:
-            "• Implemented Dashboard functionality using Python and GTK3 for Sugar OS\n" +
-            "• Created interactive widget for Sugar Desktop environment\n" +
-            "• Contributed to Python 2 to 3 migration and Music Blocks features",
-          color: "#ee3c26",
-        },
-      ],
-    },
-    {
-      title: "Internships",
-      experiences: [
-        {
-          title: "Google Summer of Code",
-          company: "Sugar Labs",
-          company_url: "https://sugarlabs.org/",
-          logo_path: "google_logo.png",
-          duration: "May 2019 - Aug 2019",
-          location: "Work From Home",
-          description:
-            "I worked on the Dashboard project which helps users track their activities while using Sugar OS. I also worked on making a Tamagotchi-like widget for Sugar's Home Screen",
-          color: "#ee3c26",
-        },
-        {
-          title: "Android App Developer Intern",
-          company: "IAS4Sure",
+          title: "Senior Associate",
+          company: "Cognizant Technology Solutions",
           company_url: " ",
-          logo_path: "buld.jpg",
-          duration: "December 2019 - February 2020",
-          location: "Work From Home",
-          description:
-            "Internship task was to make a native Android application. ",
-          color: "#0071C5",
+          logo_path: "cognizant.png",
+          duration: "June 2021 - Present",
+          location: "Chennai",
+          description: "5+ years",
+          color: "#1a3673",
         },
         {
-          title: "Web Developer",
-          company: "Wrighter Writing Solutions",
+          title: "Software Engineer",
+          company: "HCL Technologies",
           company_url: " ",
-          logo_path: "wrighter.jpg",
-          duration: "August 2020",
-          location: "",
-          description: "Develop a website using PHP and jQuery.",
-          color: "#56A4D3",
-        },
-        {
-          title: "Front-End Developer",
-          company: "VJ TechServe",
-          company_url: " ",
-          logo_path: "vjt.png",
-          duration: "September 2020",
-          location: "",
-          description: "Develop a portfolio website using ReactJS",
-          color: "#800000",
-        },
-      ],
-    },
-    {
-      title: "Volunteerships",
-      experiences: [
-        {
-          title: "Google Summer of Code Mentor",
-          company: "Sugar Labs / GSoC",
-          company_url: "https://sugarlabs.org/",
-          logo_path: "google_logo.png",
-          duration: "Summer of 2017 / 18 / 20",
-          location: " ",
-          description:
-            "Mentorship responsibilities were to help students plan the project, review issues and pull requests, ensure smooth progress and help them out when they are stuck.",
-          color: "#4285F4",
-        },
-        {
-          title: "Google Code-In Mentor",
-          company: "Sugar Labs / GSoC",
-          company_url: "https://sugarlabs.org/",
-          logo_path: "google_logo.png",
-          duration: "Winter of 2017 / 18 / 19",
-          location: " ",
-          description:
-            "Day to day resposibilites of this mentorship was to help out children aged 13-17 get started with programming and open-source, review their work and approve them.",
-          color: "#D83B01",
-        },
-        {
-          title: "Board Member at Codeuino",
-          company: " ",
-          company_url: " ",
-          logo_path: "codeuino.jpg",
-          duration: "2018 - 2019",
-          location: " ",
-          description: "Previous Board during early days of Codeuino",
-          color: "#D83B01",
-        },
-        {
-          title: "BluWings Club",
-          company: " ",
-          company_url: " ",
-          logo_path: "b.png",
-          duration: "2018 - On Going",
-          location: " ",
-          description:
-            "Co-Founder and President of the programming club called BluWings. Have organized several workshops which introduced programming and related tools to freshers.",
-          color: "#D83B01",
+          logo_path: "hcl.png",
+          duration: "March 2017 - May 2021",
+          location: "Chennai",
+          description: "4 years",
+          color: "#004b8d",
         },
       ],
     },
@@ -676,38 +556,6 @@ const contactPageData = {
 
 const projects = {
   data: [
-    {
-      name: "Apifi",
-      url: "http://apifi.io/",
-      description:
-        "A marketplace for APIs. Leading a team of 4 developers, implemented SDK-generation tools, core services like rate-limiter and console.",
-      languages: [
-        {
-          name: "AWS",
-          iconifyClass: "devicon-aws",
-        },
-        {
-          name: "Golang",
-          iconifyClass: "devicon-go",
-        },
-        {
-          name: "TypeScript",
-          iconifyClass: "devicon-typescript",
-        },
-        {
-          name: "Next.js",
-          iconifyClass: "devicon-nextjs",
-        },
-        {
-          name: "DynamoDB",
-          iconifyClass: "devicon-dynamodb",
-        },
-        {
-          name: "Redis",
-          iconifyClass: "devicon-redis",
-        },
-      ],
-    },
     {
       name: "CineScope",
       url: "https://github.com/Hrishi1999/CineScope",
