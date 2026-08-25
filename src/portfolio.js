@@ -16,8 +16,7 @@ const greeting = {
   full_name: "Prasath Narayanasamy",
   subTitle:
     "ETL & Data Integration Specialist | 8+ Years in IT, 7+ in Informatica | AI Enthusiast",
-  resumeLink:
-    "https://drive.google.com/file/d/1kcvW8P65jWZFeKR6Jopf3nrQLA1qJCwn/view?usp=sharing",
+  resumeLink: "#",
   mail: "mailto:n.prasath1024@gmail.com",
 };
 
@@ -25,9 +24,7 @@ const socialMediaLinks = {
   github: "https://github.com/nprasath1024",
   linkedin: "https://in.linkedin.com/in/prasath1024",
   gmail: "n.prasath1024@gmail.com",
-  gitlab: "",
   facebook: "https://www.facebook.com/vikky.prasath.2025",
-  twitter: "",
   instagram: "https://www.instagram.com/iam__prasath",
 };
 
@@ -411,16 +408,9 @@ const projectsHeader = {
 const contactPageData = {
   contactSection: {
     title: "Contact Me",
-    profile_image_path: "hrishi2.png",
+    profile_image_path: "prasath_profile.jpg",
     description:
       "You can contact me at the places mentioned below. I will try to get back to you as fast as I can. ",
-  },
-  blogSection: {
-    title: "Blogs",
-    subtitle:
-      "I don't blog frequently but when I do something awesome, I do try my best to write a blog about it.",
-    link: "https://medium.com/@hrishipatel99",
-    avatar_image_path: "blogs_image.svg",
   },
 };
 

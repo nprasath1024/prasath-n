@@ -9,13 +9,17 @@ function DegreeCard(props) {
 
   const style_img = style({
     width: "220px",
-    height: "auto",
-    borderRadius: " 50%",
+    height: "220px", // Forced to match width for a perfect circle
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: "50%",
     padding: "10px",
     border: `1px solid ${theme.text}`,
     marginRight: "50px",
     boxShadow: `0px 0px 2px ${theme.text}`,
     transition: "all 0.2s ease-in-out",
+    backgroundColor: "#ffffff", // Keeps the background crisp for logos
     ":hover": {
       color: "rgba(255, 255, 255, 1)",
       boxShadow: `0 2px 10px ${theme.text}`,
@@ -24,6 +28,7 @@ function DegreeCard(props) {
       marginLeft: "50px",
       marginBottom: "15px",
       width: "175px",
+      height: "175px", // Matched for mobile perfectly round circles
     },
   });
 
@@ -51,7 +56,8 @@ function DegreeCard(props) {
             style={{
               maxWidth: "100%",
               maxHeight: "100%",
-              transform: "scale(50%, 50%)",
+              borderRadius: "50%",
+              objectFit: "contain",
             }}
             src={require(`../../assests/images/${degree.logo_path}`)}
             alt={degree.alt_name}
