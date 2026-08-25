@@ -34,13 +34,14 @@ export default function Greeting(props) {
                 {greeting.subTitle}
               </p>
               <SocialMedia />
-              <div className="portfolio-repo-btn-div">
+              <div className="portfolio-repo-btn-div" style={{ marginTop: "30px" }}>
                 <a
                   {...styles}
                   className="button"
                   href="https://cardynale.com/profile/rLTJFzbMczGhWfPPrdKg_RNWrP9/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  style={{ display: "inline-block", textDecoration: "none" }}
                 >
                   <i className="fa fa-download" aria-hidden="true"></i> vCard
                 </a>
