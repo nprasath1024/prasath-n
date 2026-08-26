@@ -68,7 +68,7 @@ function Header(props) {
         <header className="header">
           <NavLink to={link} tag={Link} className="logo">
             <span style={{ color: theme.text }}></span>
-            {/* Kept nowrap to protect your name from breaking */}
+            {/* Added nowrap solely to the logo to protect it from breaking */}
             <span className="logo-name" style={{ color: theme.text, whiteSpace: "nowrap" }}>
               {greeting.logo_name}
             </span>
@@ -80,13 +80,12 @@ function Header(props) {
           </label>
           <ul className="menu">
             <li>
-              {/* Added fontSize: "19px" to every link to explicitly make the text larger */}
               <NavLink
                 className="homei"
                 to="/home"
                 tag={Link}
                 activeStyle={{ fontWeight: "bold" }}
-                style={{ borderRadius: 5, color: theme.text, fontSize: "19px" }}
+                style={{ borderRadius: 5, color: theme.text }}
               >
                 Home
               </NavLink>
@@ -97,7 +96,7 @@ function Header(props) {
                 to="/education"
                 tag={Link}
                 activeStyle={{ fontWeight: "bold" }}
-                style={{ borderRadius: 5, color: theme.text, fontSize: "19px" }}
+                style={{ borderRadius: 5, color: theme.text }}
               >
                 Education
               </NavLink>
@@ -108,7 +107,7 @@ function Header(props) {
                 to="/experience"
                 tag={Link}
                 activeStyle={{ fontWeight: "bold" }}
-                style={{ borderRadius: 5, color: theme.text, fontSize: "19px" }}
+                style={{ borderRadius: 5, color: theme.text }}
               >
                 Experience
               </NavLink>
@@ -119,7 +118,7 @@ function Header(props) {
                 to="/projects"
                 tag={Link}
                 activeStyle={{ fontWeight: "bold" }}
-                style={{ borderRadius: 5, color: theme.text, fontSize: "19px" }}
+                style={{ borderRadius: 5, color: theme.text }}
               >
                 Projects
               </NavLink>
@@ -130,7 +129,7 @@ function Header(props) {
                 to="/contact"
                 tag={Link}
                 activeStyle={{ fontWeight: "bold" }}
-                style={{ borderRadius: 5, color: theme.text, fontSize: "19px" }}
+                style={{ borderRadius: 5, color: theme.text }}
               >
                 Contact and Resume
               </NavLink>
