@@ -6,7 +6,7 @@ function SoftwareSkill(props) {
   return (
     <div>
       <div className="software-skills-main-div">
-        <ul className="dev-icons">
+        <ul className="dev-icons" style={{ display: "flex", flexWrap: "wrap", padding: 0 }}>
           {props.logos.map((logo) => {
             return (
               <OverlayTrigger
@@ -18,13 +18,24 @@ function SoftwareSkill(props) {
                   </Tooltip>
                 }
               >
-                <li className="software-skill-inline" name={logo.skillName}>
-                  <span
-                    className="iconify"
-                    data-icon={logo.fontAwesomeClassname}
-                    style={logo.style}
-                    data-inline="false"
-                  ></span>
+                <li 
+                  className="software-skill-inline" 
+                  name={logo.skillName}
+                  style={{ margin: "15px", listStyle: "none" }}
+                >
+                  <img
+                    src={require(`../../assests/images/${logo.imageSrc}`)}
+                    alt={logo.skillName}
+                    style={{
+                      width: "60px",
+                      height: "60px",
+                      objectFit: "contain",
+                      cursor: "pointer",
+                      transition: "transform 0.2s ease-in-out"
+                    }}
+                    onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
+                    onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
+                  />
                 </li>
               </OverlayTrigger>
             );
