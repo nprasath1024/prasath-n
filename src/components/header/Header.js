@@ -15,7 +15,7 @@ function Header(props) {
     height: "45px",
     width: "45px",
     marginRight: "5px",
-    marginLeft: "15px",
+    marginLeft: "5px", // Reduced from 15px to save space
     paddingTop: "5px",
     borderRadius: "50%",
     border: "none",
@@ -32,7 +32,6 @@ function Header(props) {
   });
 
   const link = settings.isSplash ? "/splash" : "home";
-
   const [currTheme, setCurrTheme] = useState(props.theme);
 
   function changeTheme() {
@@ -62,80 +61,58 @@ function Header(props) {
       />
     );
 
+  // Reusable style for nav links to force them to fit nicely
+  const navLinkStyle = {
+    borderRadius: 5,
+    color: theme.text,
+    whiteSpace: "nowrap",
+    padding: "10px 12px", // Tighter horizontal padding
+    fontSize: "15px",     // Slightly smaller text to prevent wrapping
+  };
+
   return (
     <Fade top duration={1000} distance="20px">
       <div>
         <header className="header">
           <NavLink to={link} tag={Link} className="logo" style={{ display: "flex", alignItems: "center" }}>
             <span style={{ color: theme.text }}></span>
-            {/* Added whiteSpace: "nowrap" to prevent Prasath N from wrapping */}
             <span className="logo-name" style={{ color: theme.text, whiteSpace: "nowrap" }}>
               {greeting.logo_name}
             </span>
             <span style={{ color: theme.text }}></span>
           </NavLink>
+          
           <input className="menu-btn" type="checkbox" id="menu-btn" />
           <label className="menu-icon" htmlFor="menu-btn">
             <span className="navicon"></span>
           </label>
+          
           <ul className="menu">
             <li>
-              {/* Added whiteSpace: "nowrap" to all links to prevent forced line breaks */}
-              <NavLink
-                className="homei"
-                to="/home"
-                tag={Link}
-                activeStyle={{ fontWeight: "bold" }}
-                style={{ borderRadius: 5, color: theme.text, whiteSpace: "nowrap" }}
-              >
+              <NavLink className="homei" to="/home" tag={Link} activeStyle={{ fontWeight: "bold" }} style={navLinkStyle}>
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink
-                className="ec"
-                to="/education"
-                tag={Link}
-                activeStyle={{ fontWeight: "bold" }}
-                style={{ borderRadius: 5, color: theme.text, whiteSpace: "nowrap" }}
-              >
+              <NavLink className="ec" to="/education" tag={Link} activeStyle={{ fontWeight: "bold" }} style={navLinkStyle}>
                 Education and Certification
               </NavLink>
             </li>
             <li>
-              <NavLink
-                className="xp"
-                to="/experience"
-                tag={Link}
-                activeStyle={{ fontWeight: "bold" }}
-                style={{ borderRadius: 5, color: theme.text, whiteSpace: "nowrap" }}
-              >
+              <NavLink className="xp" to="/experience" tag={Link} activeStyle={{ fontWeight: "bold" }} style={navLinkStyle}>
                 Experience
               </NavLink>
             </li>
             <li>
-              <NavLink
-                className="projects"
-                to="/projects"
-                tag={Link}
-                activeStyle={{ fontWeight: "bold" }}
-                style={{ borderRadius: 5, color: theme.text, whiteSpace: "nowrap" }}
-              >
+              <NavLink className="projects" to="/projects" tag={Link} activeStyle={{ fontWeight: "bold" }} style={navLinkStyle}>
                 Projects
               </NavLink>
             </li>
             <li>
-              <NavLink
-                className="cr"
-                to="/contact"
-                tag={Link}
-                activeStyle={{ fontWeight: "bold" }}
-                style={{ borderRadius: 5, color: theme.text, whiteSpace: "nowrap" }}
-              >
+              <NavLink className="cr" to="/contact" tag={Link} activeStyle={{ fontWeight: "bold" }} style={navLinkStyle}>
                 Contact and Resume
               </NavLink>
             </li>
-            {/* Wrapped the button in an <li> so it stays inline with the menu list */}
             <li style={{ display: "flex", alignItems: "center" }}>
               <button {...styles} onClick={changeTheme}>
                 {icon}

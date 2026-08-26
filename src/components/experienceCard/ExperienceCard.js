@@ -10,6 +10,7 @@ function ExperienceCard(props) {
       style={{
         border: `1px solid ${experience["color"]}`,
         backgroundColor: theme.imageDark,
+        height: "100%", // Forces all cards in the same row to be perfectly uniform in height
       }}
     >
       <div className="experience-card-logo-div">
@@ -38,27 +39,39 @@ function ExperienceCard(props) {
               </a>
             </p>
           </div>
-          <div className="experience-card-heading-right">
-            <p
-              className="experience-card-duration"
-              style={{ color: theme.secondaryText }}
-            >
-              {experience["duration"]}
-            </p>
-            <p
-              className="experience-card-location"
-              style={{ color: theme.secondaryText }}
-            >
-              {experience["location"]}
-            </p>
-          </div>
+          
+          {/* Only render the right side if there is actual duration or location data */}
+          {(experience["duration"] || experience["location"]) && (
+            <div className="experience-card-heading-right">
+              {experience["duration"] && (
+                <p
+                  className="experience-card-duration"
+                  style={{ color: theme.secondaryText }}
+                >
+                  {experience["duration"]}
+                </p>
+              )}
+              {experience["location"] && (
+                <p
+                  className="experience-card-location"
+                  style={{ color: theme.secondaryText }}
+                >
+                  {experience["location"]}
+                </p>
+              )}
+            </div>
+          )}
         </div>
-        <p
-          className="experience-card-description"
-          style={{ color: theme.text }}
-        >
-          {experience["description"]}
-        </p>
+        
+        {/* Only render the description if it contains text, stripping out empty spaces */}
+        {experience["description"] && experience["description"].trim() !== "" && (
+          <p
+            className="experience-card-description"
+            style={{ color: theme.text }}
+          >
+            {experience["description"]}
+          </p>
+        )}
       </div>
     </div>
   );
