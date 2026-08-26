@@ -15,7 +15,7 @@ function Header(props) {
     height: "45px",
     width: "45px",
     marginRight: "5px",
-    marginLeft: "5px", // Reduced from 15px to save space
+    marginLeft: "15px", // Restored your original spacing
     paddingTop: "5px",
     borderRadius: "50%",
     border: "none",
@@ -61,22 +61,14 @@ function Header(props) {
       />
     );
 
-  // Reusable style for nav links to force them to fit nicely
-  const navLinkStyle = {
-    borderRadius: 5,
-    color: theme.text,
-    whiteSpace: "nowrap",
-    padding: "10px 12px", // Tighter horizontal padding
-    fontSize: "15px",     // Slightly smaller text to prevent wrapping
-  };
-
   return (
     <Fade top duration={1000} distance="20px">
       <div>
         <header className="header">
-          <NavLink to={link} tag={Link} className="logo" style={{ display: "flex", alignItems: "center" }}>
+          {/* Restored the logo completely to its original code structure */}
+          <NavLink to={link} tag={Link} className="logo">
             <span style={{ color: theme.text }}></span>
-            <span className="logo-name" style={{ color: theme.text, whiteSpace: "nowrap" }}>
+            <span className="logo-name" style={{ color: theme.text }}>
               {greeting.logo_name}
             </span>
             <span style={{ color: theme.text }}></span>
@@ -89,27 +81,27 @@ function Header(props) {
           
           <ul className="menu">
             <li>
-              <NavLink className="homei" to="/home" tag={Link} activeStyle={{ fontWeight: "bold" }} style={navLinkStyle}>
+              <NavLink className="homei" to="/home" tag={Link} activeStyle={{ fontWeight: "bold" }} style={{ borderRadius: 5, color: theme.text, whiteSpace: "nowrap" }}>
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink className="ec" to="/education" tag={Link} activeStyle={{ fontWeight: "bold" }} style={navLinkStyle}>
+              <NavLink className="ec" to="/education" tag={Link} activeStyle={{ fontWeight: "bold" }} style={{ borderRadius: 5, color: theme.text, whiteSpace: "nowrap" }}>
                 Education and Certification
               </NavLink>
             </li>
             <li>
-              <NavLink className="xp" to="/experience" tag={Link} activeStyle={{ fontWeight: "bold" }} style={navLinkStyle}>
+              <NavLink className="xp" to="/experience" tag={Link} activeStyle={{ fontWeight: "bold" }} style={{ borderRadius: 5, color: theme.text, whiteSpace: "nowrap" }}>
                 Experience
               </NavLink>
             </li>
             <li>
-              <NavLink className="projects" to="/projects" tag={Link} activeStyle={{ fontWeight: "bold" }} style={navLinkStyle}>
+              <NavLink className="projects" to="/projects" tag={Link} activeStyle={{ fontWeight: "bold" }} style={{ borderRadius: 5, color: theme.text, whiteSpace: "nowrap" }}>
                 Projects
               </NavLink>
             </li>
             <li>
-              <NavLink className="cr" to="/contact" tag={Link} activeStyle={{ fontWeight: "bold" }} style={navLinkStyle}>
+              <NavLink className="cr" to="/contact" tag={Link} activeStyle={{ fontWeight: "bold" }} style={{ borderRadius: 5, color: theme.text, whiteSpace: "nowrap" }}>
                 Contact and Resume
               </NavLink>
             </li>
