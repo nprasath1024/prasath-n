@@ -3,8 +3,8 @@
 }
 
 .basic-education {
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 1%; /* Reduced from 5% to allow the layout to spread out */
+  margin-right: 1%; /* Reduced from 5% to allow the layout to spread out */
 }
 
 .heading-div {
@@ -67,4 +67,19 @@
   .heading-div {
     flex-direction: column;
   }
+}
+
+/* --- HEADER OVERRIDES TO FORCE ALIGNMENT --- */
+/* This safely forces the long names to fit without needing to hunt down Header.css */
+.menu {
+  flex-wrap: nowrap !important;
+}
+
+.menu li a {
+  white-space: nowrap !important;
+  padding: 0.5rem 10px !important; 
+}
+
+.logo-name {
+  white-space: nowrap !important;
 }
