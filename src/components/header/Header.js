@@ -15,7 +15,7 @@ function Header(props) {
     height: "45px",
     width: "45px",
     marginRight: "5px",
-    marginLeft: "15px",
+    marginLeft: "5px", // Shaved off 10px of empty space here to save room
     paddingTop: "5px",
     borderRadius: "50%",
     border: "none",
@@ -61,15 +61,24 @@ function Header(props) {
       />
     );
 
+  // We define padding inline here to shrink the invisible space between buttons
+  // Notice there is NO fontSize property, so it inherits your big original font!
+  const navLinkStyle = {
+    borderRadius: 5,
+    color: theme.text,
+    padding: "0.5rem 0.5rem", 
+    whiteSpace: "nowrap"
+  };
+
   return (
     <Fade top duration={1000} distance="20px">
       <div>
         <header className="header">
           <NavLink to={link} tag={Link} className="logo">
             <span style={{ color: theme.text }}></span>
-            {/* nowrap added exclusively here to fix "Prasath N" splitting */}
-            <span className="logo-name" style={{ color: theme.text, whiteSpace: "nowrap" }}>
-              {greeting.logo_name}
+            {/* The \u00A0 hack forces the browser to treat Prasath N as one single unbreakable word */}
+            <span className="logo-name" style={{ color: theme.text }}>
+              {greeting.logo_name.replace(" ", "\u00A0")}
             </span>
             <span style={{ color: theme.text }}></span>
           </NavLink>
@@ -81,31 +90,30 @@ function Header(props) {
           
           <ul className="menu">
             <li>
-              <NavLink className="homei" to="/home" tag={Link} activeStyle={{ fontWeight: "bold" }} style={{ borderRadius: 5, color: theme.text }}>
+              <NavLink className="homei" to="/home" tag={Link} activeStyle={{ fontWeight: "bold" }} style={navLinkStyle}>
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink className="ec" to="/education" tag={Link} activeStyle={{ fontWeight: "bold" }} style={{ borderRadius: 5, color: theme.text }}>
+              <NavLink className="ec" to="/education" tag={Link} activeStyle={{ fontWeight: "bold" }} style={navLinkStyle}>
                 Education
               </NavLink>
             </li>
             <li>
-              <NavLink className="xp" to="/experience" tag={Link} activeStyle={{ fontWeight: "bold" }} style={{ borderRadius: 5, color: theme.text }}>
+              <NavLink className="xp" to="/experience" tag={Link} activeStyle={{ fontWeight: "bold" }} style={navLinkStyle}>
                 Experience
               </NavLink>
             </li>
             <li>
-              <NavLink className="projects" to="/projects" tag={Link} activeStyle={{ fontWeight: "bold" }} style={{ borderRadius: 5, color: theme.text }}>
+              <NavLink className="projects" to="/projects" tag={Link} activeStyle={{ fontWeight: "bold" }} style={navLinkStyle}>
                 Projects
               </NavLink>
             </li>
             <li>
-              <NavLink className="cr" to="/contact" tag={Link} activeStyle={{ fontWeight: "bold" }} style={{ borderRadius: 5, color: theme.text }}>
+              <NavLink className="cr" to="/contact" tag={Link} activeStyle={{ fontWeight: "bold" }} style={navLinkStyle}>
                 Contact and Resume
               </NavLink>
             </li>
-            {/* Reverted exactly to original template structure: no wrapping <li> tag */}
             <button {...styles} onClick={changeTheme}>
               {icon}
             </button>
