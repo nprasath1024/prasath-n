@@ -32,6 +32,7 @@ function Header(props) {
   });
 
   const link = settings.isSplash ? "/splash" : "home";
+
   const [currTheme, setCurrTheme] = useState(props.theme);
 
   function changeTheme() {
@@ -64,51 +65,77 @@ function Header(props) {
   return (
     <Fade top duration={1000} distance="20px">
       <div>
-        {/* Enforced strict nowrap on the entire header row */}
-        <header className="header" style={{ display: "flex", flexWrap: "nowrap", alignItems: "center" }}>
-          
-          {/* flexShrink: 0 and minWidth: "max-content" absolutely prevents the logo from squishing */}
-          <NavLink to={link} tag={Link} className="logo" style={{ flexShrink: 0, minWidth: "max-content", whiteSpace: "nowrap" }}>
+        <header className="header">
+          <NavLink to={link} tag={Link} className="logo">
             <span style={{ color: theme.text }}></span>
+            {/* Kept nowrap to protect your name from breaking */}
             <span className="logo-name" style={{ color: theme.text, whiteSpace: "nowrap" }}>
               {greeting.logo_name}
             </span>
             <span style={{ color: theme.text }}></span>
           </NavLink>
-          
           <input className="menu-btn" type="checkbox" id="menu-btn" />
-          <label className="menu-icon" htmlFor="menu-btn" style={{ flexShrink: 0 }}>
+          <label className="menu-icon" htmlFor="menu-btn">
             <span className="navicon"></span>
           </label>
-          
-          {/* Enforced strict nowrap and zero shrinking on the menu container and all list items */}
-          <ul className="menu" style={{ display: "flex", flexWrap: "nowrap", alignItems: "center", flexShrink: 0 }}>
-            <li style={{ flexShrink: 0 }}>
-              <NavLink className="homei" to="/home" tag={Link} activeStyle={{ fontWeight: "bold" }} style={{ borderRadius: 5, color: theme.text }}>
+          <ul className="menu">
+            <li>
+              {/* Added fontSize: "19px" to every link to explicitly make the text larger */}
+              <NavLink
+                className="homei"
+                to="/home"
+                tag={Link}
+                activeStyle={{ fontWeight: "bold" }}
+                style={{ borderRadius: 5, color: theme.text, fontSize: "19px" }}
+              >
                 Home
               </NavLink>
             </li>
-            <li style={{ flexShrink: 0 }}>
-              <NavLink className="ec" to="/education" tag={Link} activeStyle={{ fontWeight: "bold" }} style={{ borderRadius: 5, color: theme.text }}>
+            <li>
+              <NavLink
+                className="ec"
+                to="/education"
+                tag={Link}
+                activeStyle={{ fontWeight: "bold" }}
+                style={{ borderRadius: 5, color: theme.text, fontSize: "19px" }}
+              >
                 Education
               </NavLink>
             </li>
-            <li style={{ flexShrink: 0 }}>
-              <NavLink className="xp" to="/experience" tag={Link} activeStyle={{ fontWeight: "bold" }} style={{ borderRadius: 5, color: theme.text }}>
+            <li>
+              <NavLink
+                className="xp"
+                to="/experience"
+                tag={Link}
+                activeStyle={{ fontWeight: "bold" }}
+                style={{ borderRadius: 5, color: theme.text, fontSize: "19px" }}
+              >
                 Experience
               </NavLink>
             </li>
-            <li style={{ flexShrink: 0 }}>
-              <NavLink className="projects" to="/projects" tag={Link} activeStyle={{ fontWeight: "bold" }} style={{ borderRadius: 5, color: theme.text }}>
+            <li>
+              <NavLink
+                className="projects"
+                to="/projects"
+                tag={Link}
+                activeStyle={{ fontWeight: "bold" }}
+                style={{ borderRadius: 5, color: theme.text, fontSize: "19px" }}
+              >
                 Projects
               </NavLink>
             </li>
-            <li style={{ flexShrink: 0 }}>
-              <NavLink className="cr" to="/contact" tag={Link} activeStyle={{ fontWeight: "bold" }} style={{ borderRadius: 5, color: theme.text }}>
+            <li>
+              <NavLink
+                className="cr"
+                to="/contact"
+                tag={Link}
+                activeStyle={{ fontWeight: "bold" }}
+                style={{ borderRadius: 5, color: theme.text, fontSize: "19px" }}
+              >
                 Contact and Resume
               </NavLink>
             </li>
-            <button {...styles} onClick={changeTheme} style={{ flexShrink: 0, marginLeft: "15px" }}>
+            <button {...styles} onClick={changeTheme}>
               {icon}
             </button>
           </ul>
