@@ -24,7 +24,6 @@ function SkillSection(props) {
                 </h1>
               </Fade>
               
-              {/* Safely checks for logos before attempting to render them */}
               {skill.softwareSkills && skill.softwareSkills.length > 0 && (
                 <Fade right duration={1500}>
                   <SoftwareSkill logos={skill.softwareSkills} />
@@ -38,7 +37,8 @@ function SkillSection(props) {
                       <p
                         key={i}
                         className="subTitle skills-text"
-                        style={{ color: theme.secondaryText, marginBottom: "15px", lineHeight: "1.7" }}
+                        // Increased fontSize to 19px for better readability
+                        style={{ color: theme.secondaryText, marginBottom: "15px", lineHeight: "1.7", fontSize: "19px" }}
                       >
                         {skillSentence}
                       </p>
