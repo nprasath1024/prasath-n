@@ -8,12 +8,15 @@ function SoftwareSkill(props) {
       <div className="software-skills-main-div">
         <ul className="dev-icons" style={{ display: "flex", flexWrap: "wrap", padding: 0 }}>
           {props.logos.map((logo) => {
+            {/* Generates a 100% unique ID for every tooltip to prevent browser crash */}
+            const uniqueId = `tooltip-${logo.skillName.replace(/[^a-zA-Z0-9]/g, "")}`;
+            
             return (
               <OverlayTrigger
                 key={logo.skillName}
                 placement={"top"}
                 overlay={
-                  <Tooltip id={`tooltip-top`}>
+                  <Tooltip id={uniqueId}>
                     <strong>{logo.skillName}</strong>
                   </Tooltip>
                 }
@@ -30,11 +33,8 @@ function SoftwareSkill(props) {
                       width: "60px",
                       height: "60px",
                       objectFit: "contain",
-                      cursor: "pointer",
-                      transition: "transform 0.2s ease-in-out"
+                      cursor: "pointer"
                     }}
-                    onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
-                    onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
                   />
                 </li>
               </OverlayTrigger>
