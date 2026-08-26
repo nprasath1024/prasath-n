@@ -66,9 +66,10 @@ function Header(props) {
     <Fade top duration={1000} distance="20px">
       <div>
         <header className="header">
-          <NavLink to={link} tag={Link} className="logo">
+          <NavLink to={link} tag={Link} className="logo" style={{ display: "flex", alignItems: "center" }}>
             <span style={{ color: theme.text }}></span>
-            <span className="logo-name" style={{ color: theme.text }}>
+            {/* Added whiteSpace: "nowrap" to prevent Prasath N from wrapping */}
+            <span className="logo-name" style={{ color: theme.text, whiteSpace: "nowrap" }}>
               {greeting.logo_name}
             </span>
             <span style={{ color: theme.text }}></span>
@@ -79,12 +80,13 @@ function Header(props) {
           </label>
           <ul className="menu">
             <li>
+              {/* Added whiteSpace: "nowrap" to all links to prevent forced line breaks */}
               <NavLink
                 className="homei"
                 to="/home"
                 tag={Link}
                 activeStyle={{ fontWeight: "bold" }}
-                style={{ borderRadius: 5, color: theme.text }}
+                style={{ borderRadius: 5, color: theme.text, whiteSpace: "nowrap" }}
               >
                 Home
               </NavLink>
@@ -95,7 +97,7 @@ function Header(props) {
                 to="/education"
                 tag={Link}
                 activeStyle={{ fontWeight: "bold" }}
-                style={{ borderRadius: 5, color: theme.text }}
+                style={{ borderRadius: 5, color: theme.text, whiteSpace: "nowrap" }}
               >
                 Education and Certification
               </NavLink>
@@ -106,7 +108,7 @@ function Header(props) {
                 to="/experience"
                 tag={Link}
                 activeStyle={{ fontWeight: "bold" }}
-                style={{ borderRadius: 5, color: theme.text }}
+                style={{ borderRadius: 5, color: theme.text, whiteSpace: "nowrap" }}
               >
                 Experience
               </NavLink>
@@ -117,7 +119,7 @@ function Header(props) {
                 to="/projects"
                 tag={Link}
                 activeStyle={{ fontWeight: "bold" }}
-                style={{ borderRadius: 5, color: theme.text }}
+                style={{ borderRadius: 5, color: theme.text, whiteSpace: "nowrap" }}
               >
                 Projects
               </NavLink>
@@ -128,14 +130,17 @@ function Header(props) {
                 to="/contact"
                 tag={Link}
                 activeStyle={{ fontWeight: "bold" }}
-                style={{ borderRadius: 5, color: theme.text }}
+                style={{ borderRadius: 5, color: theme.text, whiteSpace: "nowrap" }}
               >
                 Contact and Resume
               </NavLink>
             </li>
-            <button {...styles} onClick={changeTheme}>
-              {icon}
-            </button>
+            {/* Wrapped the button in an <li> so it stays inline with the menu list */}
+            <li style={{ display: "flex", alignItems: "center" }}>
+              <button {...styles} onClick={changeTheme}>
+                {icon}
+              </button>
+            </li>
           </ul>
         </header>
       </div>

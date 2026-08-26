@@ -2,8 +2,8 @@
 
 // Website related settings
 const settings = {
-  isSplash: false, // Change this to true if you want to use the splash screen.
-  useCustomCursor: true, // Change this to false if you want the good'ol cursor
+  isSplash: false, 
+  useCustomCursor: false, 
   googleTrackingID: "UA-174238252-2",
 };
 
@@ -32,8 +32,8 @@ const skills = {
   data: [
     {
       title: "ETL Developer",
-      fileName: "", // We will remove the large illustration in the component files
-      skills: [], // Text removed as requested
+      fileName: "", 
+      skills: [], 
       softwareSkills: [
         { skillName: "Informatica PowerCenter", imageSrc: "informatica_powercenter.png" },
         { skillName: "Oracle", imageSrc: "oracle.png" },
@@ -64,7 +64,7 @@ const skills = {
         "⚡ Project Management Tools – Rally, HP Quality Center (ALM), Jira",
         "⚡ Basic knowledge of Core Java and HTML/CSS"
       ],
-      softwareSkills: [], // Removed logos as requested
+      softwareSkills: [], 
     },
     
     {
@@ -79,7 +79,7 @@ const skills = {
         "⚡ Good experience working in Agile methodology, participating in all phases from planning to sign-off",
         "⚡ Good experience in code release activities, from creating implementation plans to post-checkout validations"
       ],
-      softwareSkills: [], // Removed logos as requested
+      softwareSkills: [], 
     },
   ],
 };
@@ -91,7 +91,7 @@ const degrees = {
       subtitle: "MBA (Production & Operations Management)",
       logo_path: "alagappa.png",
       alt_name: "Alagappa University",
-      duration: "",
+      duration: "", 
       descriptions: ["⚡ Alagappa University, Karaikudi, Tamil Nadu"],
       website_link: " ",
     },
@@ -100,7 +100,7 @@ const degrees = {
       subtitle: "B.E.",
       logo_path: "sriramanujar.png",
       alt_name: "Sri Ramanujar Engineering College",
-      duration: "",
+      duration: "", 
       descriptions: ["⚡ Affiliated to Anna University, Chennai"],
       website_link: " ",
     },
@@ -109,7 +109,7 @@ const degrees = {
       subtitle: "12th (HSC)",
       logo_path: "gandhi.png",
       alt_name: "Gandhi Matric. Higher Secondary School",
-      duration: "",
+      duration: "", 
       descriptions: ["⚡ Tamil Nadu Board of Secondary Education"],
       website_link: " ",
     },
@@ -118,7 +118,7 @@ const degrees = {
       subtitle: "10th (SSLC)",
       logo_path: "gandhi.png",
       alt_name: "Gandhi Matric. Higher Secondary School",
-      duration: "",
+      duration: "", 
       descriptions: ["⚡ Tamil Nadu Matriculation Board"],
       website_link: " ",
     },
@@ -162,10 +162,114 @@ const experience = {
         },
       ],
     },
+    {
+      title: "Certifications",
+      experiences: [
+        {
+          title: "IDMC Cloud Data Integration for PowerCenter Developers",
+          company: "Foundation Certification – Informatica",
+          company_url: " ",
+          logo_path: "informatica_powercenter.png",
+          duration: "",
+          location: "",
+          description: " ",
+          color: "#ff6a00",
+        },
+        {
+          title: "Informatica Data Management Cloud (IDMC)",
+          company: "Partner Bootcamp – Informatica",
+          company_url: " ",
+          logo_path: "informatica_powercenter.png",
+          duration: "",
+          location: "",
+          description: " ",
+          color: "#ff6a00",
+        },
+        {
+          title: "Informatica PowerCenter: Beginner to Expert Level",
+          company: "Udemy",
+          company_url: " ",
+          logo_path: "Udemy.png",
+          duration: "",
+          location: "",
+          description: " ",
+          color: "#a435f0",
+        },
+        {
+          title: "AWS Cloud Practitioner Essentials: Cloud Concepts",
+          company: "Amazon Web Services",
+          company_url: " ",
+          logo_path: "aws.png",
+          duration: "",
+          location: "",
+          description: " ",
+          color: "#ff9900",
+        },
+        {
+          title: "Introduction to Cloud Computing",
+          company: "Udemy",
+          company_url: " ",
+          logo_path: "Udemy.png",
+          duration: "",
+          location: "",
+          description: " ",
+          color: "#a435f0",
+        },
+      ],
+    },
+    {
+      title: "Agile / Scrum",
+      experiences: [
+        {
+          title: "Scrum Foundation Professional Certificate (SFPC)",
+          company: "CertiProf",
+          company_url: " ",
+          logo_path: "CertiProf.png",
+          duration: "",
+          location: "",
+          description: " ",
+          color: "#1b82e1",
+        },
+      ],
+    },
+    {
+      title: "Professional / Soft Skills",
+      experiences: [
+        {
+          title: "Communication and Interpersonal Skills at Work",
+          company: "University of Leeds & Institute of Coding",
+          company_url: " ",
+          logo_path: "Leeds.png",
+          duration: "",
+          location: "",
+          description: " ",
+          color: "#187a41",
+        },
+        {
+          title: "AI Tools and ChatGPT Workshop",
+          company: "Be10x",
+          company_url: " ",
+          logo_path: "Be10x.png",
+          duration: "",
+          location: "",
+          description: " ",
+          color: "#000000",
+        },
+        {
+          title: "Data Science Foundation",
+          company: "Cognizant",
+          company_url: " ",
+          logo_path: "cognizant.png",
+          duration: "",
+          location: "",
+          description: " ",
+          color: "#1a3673",
+        },
+      ],
+    }
   ],
 };
 
-// Projects Page
 const projectsHeader = {
   title: "Projects",
   description:
@@ -173,7 +277,6 @@ const projectsHeader = {
   avatar_image_path: "projects_image.svg",
 };
 
-// Contact Page
 const contactPageData = {
   contactSection: {
     title: "Contact Me",
@@ -190,26 +293,11 @@ const projects = {
       url: "https://github.com/Hrishi1999/CineScope",
       description: "An IMDB-like application.",
       languages: [
-        {
-          name: "React.js",
-          iconifyClass: "logos-react",
-        },
-        {
-          name: "TypeScript",
-          iconifyClass: "devicon-typescript",
-        },
-        {
-          name: "Node.js",
-          iconifyClass: "devicon-nodejs",
-        },
-        {
-          name: "Express.js",
-          iconifyClass: "devicon-express",
-        },
-        {
-          name: "MongoDB",
-          iconifyClass: "logos-mongodb",
-        },
+        { name: "React.js", iconifyClass: "logos-react" },
+        { name: "TypeScript", iconifyClass: "devicon-typescript" },
+        { name: "Node.js", iconifyClass: "devicon-nodejs" },
+        { name: "Express.js", iconifyClass: "devicon-express" },
+        { name: "MongoDB", iconifyClass: "logos-mongodb" },
       ],
     },
     {
@@ -218,14 +306,8 @@ const projects = {
       description:
         "You personal journaling companion, goals & daily challenges! About 5k+ downloads on Play Store.",
       languages: [
-        {
-          name: "Flutter",
-          iconifyClass: "logos-flutter",
-        },
-        {
-          name: "Firebase",
-          iconifyClass: "logos-firebase",
-        },
+        { name: "Flutter", iconifyClass: "logos-flutter" },
+        { name: "Firebase", iconifyClass: "logos-firebase" },
       ],
     },
     {
@@ -233,14 +315,8 @@ const projects = {
       url: "https://rapidapi.com/Hrishi1999/api/recipesapi2",
       description: "Get recipes for hundreds and thousands of dishes",
       languages: [
-        {
-          name: "NodeJS",
-          iconifyClass: "logos-nodejs",
-        },
-        {
-          name: "JavaScript",
-          iconifyClass: "logos-javascript",
-        },
+        { name: "NodeJS", iconifyClass: "logos-nodejs" },
+        { name: "JavaScript", iconifyClass: "logos-javascript" },
       ],
     },
     {
@@ -248,10 +324,7 @@ const projects = {
       url: "https://github.com/Hrishi1999/opPortfolio",
       description: "(This) A clean and full customizable portfolio template.",
       languages: [
-        {
-          name: "ReactJS",
-          iconifyClass: "logos-react",
-        },
+        { name: "ReactJS", iconifyClass: "logos-react" },
       ],
     },
     {
@@ -260,18 +333,9 @@ const projects = {
       description:
         "Driver drowsiness detection, profanity detection, violence detection, SMS alerts, cab driver tracking.",
       languages: [
-        {
-          name: "Python",
-          iconifyClass: "logos-python",
-        },
-        {
-          name: "Tensorflow",
-          iconifyClass: "logos-tensorflow",
-        },
-        {
-          name: "OpenCV",
-          iconifyClass: "logos-opencv",
-        },
+        { name: "Python", iconifyClass: "logos-python" },
+        { name: "Tensorflow", iconifyClass: "logos-tensorflow" },
+        { name: "OpenCV", iconifyClass: "logos-opencv" },
       ],
     },
     {
@@ -280,18 +344,9 @@ const projects = {
       description:
         "Published on Play Store back in 2017, crossed 55K downloads. Performed object detection, image captioning, OCR, handwritten OCR, barcode and QR code scanning with product information.",
       languages: [
-        {
-          name: "JavaScript",
-          iconifyClass: "logos-java",
-        },
-        {
-          name: "Python",
-          iconifyClass: "logos-python",
-        },
-        {
-          name: "Firebase",
-          iconifyClass: "logos-firebase",
-        },
+        { name: "JavaScript", iconifyClass: "logos-java" },
+        { name: "Python", iconifyClass: "logos-python" },
+        { name: "Firebase", iconifyClass: "logos-firebase" },
       ],
     },
     {
@@ -300,18 +355,9 @@ const projects = {
       description:
         "A sound-classifier webapp made with ReactJS + TensorflowJS.",
       languages: [
-        {
-          name: "Python",
-          iconifyClass: "logos-python",
-        },
-        {
-          name: "ReactJS",
-          iconifyClass: "logos-react",
-        },
-        {
-          name: "TensorflowJS",
-          iconifyClass: "logos-tensorflow",
-        },
+        { name: "Python", iconifyClass: "logos-python" },
+        { name: "ReactJS", iconifyClass: "logos-react" },
+        { name: "TensorflowJS", iconifyClass: "logos-tensorflow" },
       ],
     },
     {
@@ -320,22 +366,10 @@ const projects = {
       description:
         "A video summarization webapp. A Flask-based backend which servers the Tensorflow model and a frontend made in ReactJS.",
       languages: [
-        {
-          name: "JavaScript",
-          iconifyClass: "logos-javascript",
-        },
-        {
-          name: "Python",
-          iconifyClass: "logos-python",
-        },
-        {
-          name: "ReactJS",
-          iconifyClass: "logos-react",
-        },
-        {
-          name: "Tensorflow",
-          iconifyClass: "logos-tensorflow",
-        },
+        { name: "JavaScript", iconifyClass: "logos-javascript" },
+        { name: "Python", iconifyClass: "logos-python" },
+        { name: "ReactJS", iconifyClass: "logos-react" },
+        { name: "Tensorflow", iconifyClass: "logos-tensorflow" },
       ],
     },
     {
@@ -344,10 +378,7 @@ const projects = {
       description:
         "Google Summer of Code project. A Dashboard activity for Sugar OS which tracks user activity so user can know where they use their most time and where they create most files.",
       languages: [
-        {
-          name: "Python",
-          iconifyClass: "logos-python",
-        },
+        { name: "Python", iconifyClass: "logos-python" },
       ],
     },
     {
@@ -356,18 +387,9 @@ const projects = {
       description:
         "An app similar to Uber Eats but targeted for Gruhudhyogs (homemade pickles and products). Order management, live order tracking, rating and reviews system, etc.",
       languages: [
-        {
-          name: "Java",
-          iconifyClass: "logos-java",
-        },
-        {
-          name: "Firebase",
-          iconifyClass: "logos-firebase",
-        },
-        {
-          name: "Python",
-          iconifyClass: "logos-python",
-        },
+        { name: "Java", iconifyClass: "logos-java" },
+        { name: "Firebase", iconifyClass: "logos-firebase" },
+        { name: "Python", iconifyClass: "logos-python" },
       ],
     },
     {
@@ -376,26 +398,11 @@ const projects = {
       description:
         "An aadhard-card like utility card which keeps track of all your health records suchs as: Medicines, Lab Reports, Recent Diseases, Allergies, etc.",
       languages: [
-        {
-          name: "JavaScript",
-          iconifyClass: "logos-java",
-        },
-        {
-          name: "Python",
-          iconifyClass: "logos-python",
-        },
-        {
-          name: "Firebase",
-          iconifyClass: "logos-firebase",
-        },
-        {
-          name: "ReactJS",
-          iconifyClass: "logos-react",
-        },
-        {
-          name: "MongoDB",
-          iconifyClass: "logos-mongodb",
-        },
+        { name: "JavaScript", iconifyClass: "logos-java" },
+        { name: "Python", iconifyClass: "logos-python" },
+        { name: "Firebase", iconifyClass: "logos-firebase" },
+        { name: "ReactJS", iconifyClass: "logos-react" },
+        { name: "MongoDB", iconifyClass: "logos-mongodb" },
       ],
     },
     {
@@ -404,22 +411,10 @@ const projects = {
       description:
         "A food classifier app using tflite which classfier over 50 Indian Dishes.",
       languages: [
-        {
-          name: "Flutter",
-          iconifyClass: "logos-flutter",
-        },
-        {
-          name: "Dart",
-          iconifyClass: "logos-dart",
-        },
-        {
-          name: "Tensorflow",
-          iconifyClass: "logos-tensorflow",
-        },
-        {
-          name: "Jupyter Notebook",
-          iconifyClass: "logos-jupyter",
-        },
+        { name: "Flutter", iconifyClass: "logos-flutter" },
+        { name: "Dart", iconifyClass: "logos-dart" },
+        { name: "Tensorflow", iconifyClass: "logos-tensorflow" },
+        { name: "Jupyter Notebook", iconifyClass: "logos-jupyter" },
       ],
     },
     {
@@ -428,14 +423,8 @@ const projects = {
       description:
         "A simple use of K-Means Clustering algorithm to sort images by automatically predicting number of classes. This can be used to clean an image dataset.",
       languages: [
-        {
-          name: "Python",
-          iconifyClass: "logos-python",
-        },
-        {
-          name: "Jupyter Notebook",
-          iconifyClass: "logos-jupyter",
-        },
+        { name: "Python", iconifyClass: "logos-python" },
+        { name: "Jupyter Notebook", iconifyClass: "logos-jupyter" },
       ],
     },
     {
@@ -444,10 +433,7 @@ const projects = {
       description:
         "A project from 2012. Made an antivirus with realtime scanning. Implemented by using comparison of md5 hashes.",
       languages: [
-        {
-          name: "Visual Basic",
-          iconifyClass: "logos-dotnet",
-        },
+        { name: "Visual Basic", iconifyClass: "logos-dotnet" },
       ],
     },
     {
@@ -456,14 +442,8 @@ const projects = {
       description:
         "Run and setup Sugar OS to be able to run on Windows using Windows Subsystem for Linux",
       languages: [
-        {
-          name: "Visual Basic",
-          iconifyClass: "logos-dotnet",
-        },
-        {
-          name: "Python",
-          iconifyClass: "logos-python",
-        },
+        { name: "Visual Basic", iconifyClass: "logos-dotnet" },
+        { name: "Python", iconifyClass: "logos-python" },
       ],
     },
     {
@@ -471,18 +451,9 @@ const projects = {
       url: " ",
       description: "2017 project. Object detection + accurate face detection.",
       languages: [
-        {
-          name: "Python",
-          iconifyClass: "logos-python",
-        },
-        {
-          name: "Tensorflow",
-          iconifyClass: "logos-tensorflow",
-        },
-        {
-          name: "OpenCV",
-          iconifyClass: "logos-opencv",
-        },
+        { name: "Python", iconifyClass: "logos-python" },
+        { name: "Tensorflow", iconifyClass: "logos-tensorflow" },
+        { name: "OpenCV", iconifyClass: "logos-opencv" },
       ],
     },
     {
@@ -490,18 +461,9 @@ const projects = {
       url: " ",
       description: "Ongoing. Used MSCOCO 2014/2017 for image captioning.",
       languages: [
-        {
-          name: "Python",
-          iconifyClass: "logos-python",
-        },
-        {
-          name: "Tensorflow",
-          iconifyClass: "logos-tensorflow",
-        },
-        {
-          name: "Jupyter Notebook",
-          iconifyClass: "logos-jupyter",
-        },
+        { name: "Python", iconifyClass: "logos-python" },
+        { name: "Tensorflow", iconifyClass: "logos-tensorflow" },
+        { name: "Jupyter Notebook", iconifyClass: "logos-jupyter" },
       ],
     },
     {
@@ -510,20 +472,9 @@ const projects = {
       description:
         "An Android app to meet new people in the university, organize and join events. ",
       languages: [
-        {
-          name: "Kotlin",
-          iconifyClass: "simple-icons:kotlin",
-          color: "#F18E33",
-        },
-        {
-          name: "Android",
-          iconifyClass: "simple-icons:android",
-          color: "#3DDC84",
-        },
-        {
-          name: "Firebase",
-          iconifyClass: "logos-firebase",
-        },
+        { name: "Kotlin", iconifyClass: "simple-icons:kotlin", color: "#F18E33" },
+        { name: "Android", iconifyClass: "simple-icons:android", color: "#3DDC84" },
+        { name: "Firebase", iconifyClass: "logos-firebase" },
       ],
     },
     {
@@ -532,18 +483,9 @@ const projects = {
       description:
         "CSCI5410 Project. A multi-client recipe app for Halifax Foodies.",
       languages: [
-        {
-          name: "ReactJS",
-          iconifyClass: "logos-react",
-        },
-        {
-          name: "AWS",
-          iconifyClass: "logos-aws",
-        },
-        {
-          name: "Google Cloud",
-          iconifyClass: "logos-google-cloud",
-        },
+        { name: "ReactJS", iconifyClass: "logos-react" },
+        { name: "AWS", iconifyClass: "logos-aws" },
+        { name: "Google Cloud", iconifyClass: "logos-google-cloud" },
       ],
     },
   ],
