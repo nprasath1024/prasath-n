@@ -45,7 +45,6 @@ const skills = {
         { skillName: "GitHub", imageSrc: "github.png" },
         { skillName: "VS Code", imageSrc: "vscode.png" },
         { skillName: "Guidewire", imageSrc: "guidewire.png" },
-        /* FIXED: Spelled perfectly as procede.png to match your file! */
         { skillName: "PROCEDE", imageSrc: "procede.png" } 
       ],
     },
@@ -274,8 +273,7 @@ const experience = {
 
 const projectsHeader = {
   title: "Projects",
-  description:
-    "My projects makes use of vast variety of latest technology tools. My best experience is to create Data Science projects. Below are some of my projects. Note that not all of the mentioned projects are on GitHub yet.",
+  description: "",
   avatar_image_path: "projects_image.svg",
 };
 
@@ -291,205 +289,51 @@ const contactPageData = {
 const projects = {
   data: [
     {
-      name: "CineScope",
-      url: "https://github.com/Hrishi1999/CineScope",
-      description: "An IMDB-like application.",
-      languages: [
-        { name: "React.js", iconifyClass: "logos-react" },
-        { name: "TypeScript", iconifyClass: "devicon-typescript" },
-        { name: "Node.js", iconifyClass: "devicon-nodejs" },
-        { name: "Express.js", iconifyClass: "devicon-express" },
-        { name: "MongoDB", iconifyClass: "logos-mongodb" },
-      ],
-    },
-    {
-      name: "Journalify",
-      url: "https://play.google.com/store/apps/details?id=com.picle.journalify",
-      description:
-        "You personal journaling companion, goals & daily challenges! About 5k+ downloads on Play Store.",
-      languages: [
-        { name: "Flutter", iconifyClass: "logos-flutter" },
-        { name: "Firebase", iconifyClass: "logos-firebase" },
-      ],
-    },
-    {
-      name: "RecipesAPI",
-      url: "https://rapidapi.com/Hrishi1999/api/recipesapi2",
-      description: "Get recipes for hundreds and thousands of dishes",
-      languages: [
-        { name: "NodeJS", iconifyClass: "logos-nodejs" },
-        { name: "JavaScript", iconifyClass: "logos-javascript" },
-      ],
-    },
-    {
-      name: "opPortfolio",
-      url: "https://github.com/Hrishi1999/opPortfolio",
-      description: "(This) A clean and full customizable portfolio template.",
-      languages: [
-        { name: "ReactJS", iconifyClass: "logos-react" },
-      ],
-    },
-    {
-      name: "Cab Security System",
-      url: " ",
-      description:
-        "Driver drowsiness detection, profanity detection, violence detection, SMS alerts, cab driver tracking.",
-      languages: [
-        { name: "Python", iconifyClass: "logos-python" },
-        { name: "Tensorflow", iconifyClass: "logos-tensorflow" },
-        { name: "OpenCV", iconifyClass: "logos-opencv" },
-      ],
-    },
-    {
-      name: "Lensinator",
-      url: " ",
-      description:
-        "Published on Play Store back in 2017, crossed 55K downloads. Performed object detection, image captioning, OCR, handwritten OCR, barcode and QR code scanning with product information.",
-      languages: [
-        { name: "JavaScript", iconifyClass: "logos-java" },
-        { name: "Python", iconifyClass: "logos-python" },
-        { name: "Firebase", iconifyClass: "logos-firebase" },
-      ],
-    },
-    {
-      name: "Doorbell.io",
-      url: "https://github.com/Hrishi1999/Doorbell.io",
-      description:
-        "A sound-classifier webapp made with ReactJS + TensorflowJS.",
-      languages: [
-        { name: "Python", iconifyClass: "logos-python" },
-        { name: "ReactJS", iconifyClass: "logos-react" },
-        { name: "TensorflowJS", iconifyClass: "logos-tensorflow" },
-      ],
-    },
-    {
-      name: "Video Summarization",
-      url: "https://github.com/Hrishi1999/Video-Summarization",
-      description:
-        "A video summarization webapp. A Flask-based backend which servers the Tensorflow model and a frontend made in ReactJS.",
-      languages: [
-        { name: "JavaScript", iconifyClass: "logos-javascript" },
-        { name: "Python", iconifyClass: "logos-python" },
-        { name: "ReactJS", iconifyClass: "logos-react" },
-        { name: "Tensorflow", iconifyClass: "logos-tensorflow" },
-      ],
-    },
-    {
-      name: "Dashboard Activity",
-      url: "https://github.com/Hrishi1999/Dashboard.activity",
-      description:
-        "Google Summer of Code project. A Dashboard activity for Sugar OS which tracks user activity so user can know where they use their most time and where they create most files.",
-      languages: [
-        { name: "Python", iconifyClass: "logos-python" },
-      ],
-    },
-    {
-      name: "Project Pickle",
-      url: " ",
-      description:
-        "An app similar to Uber Eats but targeted for Gruhudhyogs (homemade pickles and products). Order management, live order tracking, rating and reviews system, etc.",
-      languages: [
-        { name: "Java", iconifyClass: "logos-java" },
-        { name: "Firebase", iconifyClass: "logos-firebase" },
-        { name: "Python", iconifyClass: "logos-python" },
-      ],
-    },
-    {
-      name: "Project Health Card",
+      name: "GSS Navigator",
       url: "",
-      description:
-        "An aadhard-card like utility card which keeps track of all your health records suchs as: Medicines, Lab Reports, Recent Diseases, Allergies, etc.",
-      languages: [
-        { name: "JavaScript", iconifyClass: "logos-java" },
-        { name: "Python", iconifyClass: "logos-python" },
-        { name: "Firebase", iconifyClass: "logos-firebase" },
-        { name: "ReactJS", iconifyClass: "logos-react" },
-        { name: "MongoDB", iconifyClass: "logos-mongodb" },
+      description: "Domain: Reinsurance | Role: ETL Developer | Methodology: Agile\n\nDesigned and maintained Informatica ETL pipelines to process critical policy, claim, loss, and premium data for a large-scale reinsurance platform. Built automated data flows to ingest source files and load seeded data into the PROCEDE application, and engineered complex ETL logic to retrieve calculated data from PROCEDE for reporting and local database integration. Implemented the e-Distribution process to generate and transmit bills and invoices to reinsurers, and managed data feeds to downstream systems for policy and claim tracking to keep cross-team business reporting aligned. Additionally supported manual data requests through direct loading procedures into PROCEDE, and enabled cash-flow operations and reconciliation processes to track insurer payments. Worked closely with source and downstream teams throughout to ensure seamless integration and accurate financial reporting.",
+      softwareSkills: [
+        { skillName: "Informatica PowerCenter", imageSrc: "informatica_powercenter.png" },
+        { skillName: "Oracle", imageSrc: "oracle.png" },
+        { skillName: "PL/SQL", imageSrc: "plsql.png" },
+        { skillName: "SQL Server", imageSrc: "sql_server.png" },
+        { skillName: "Unix", imageSrc: "unix_script.png" }
       ],
     },
     {
-      name: "Food Classifier",
-      url: " ",
-      description:
-        "A food classifier app using tflite which classfier over 50 Indian Dishes.",
-      languages: [
-        { name: "Flutter", iconifyClass: "logos-flutter" },
-        { name: "Dart", iconifyClass: "logos-dart" },
-        { name: "Tensorflow", iconifyClass: "logos-tensorflow" },
-        { name: "Jupyter Notebook", iconifyClass: "logos-jupyter" },
+      name: "HFP Integration",
+      url: "",
+      description: "Domain: Reinsurance | Role: ETL Developer | Methodology: Agile\n\nIntegrated new reinsurance streams by leveraging the GSS Navigator framework, improving code reuse and delivery efficiency. Collaborated with source teams to define database views incorporating specific HSC requirements, and architected advanced Informatica packages to manage core reinsurance processes and dataset synchronization. Ensured seamless end-to-end data flow from staging through calculation and reporting, while maintaining compliance with financial reporting protocols during the integration of specialized billing data. Upheld high performance standards across all data packages to support consistent business alignment.",
+      softwareSkills: [
+        { skillName: "Informatica PowerCenter", imageSrc: "informatica_powercenter.png" },
+        { skillName: "Oracle", imageSrc: "oracle.png" },
+        { skillName: "PL/SQL", imageSrc: "plsql.png" },
+        { skillName: "SQL Server", imageSrc: "sql_server.png" },
+        { skillName: "Unix", imageSrc: "unix_script.png" }
       ],
     },
     {
-      name: "Image Clustering",
-      url: " ",
-      description:
-        "A simple use of K-Means Clustering algorithm to sort images by automatically predicting number of classes. This can be used to clean an image dataset.",
-      languages: [
-        { name: "Python", iconifyClass: "logos-python" },
-        { name: "Jupyter Notebook", iconifyClass: "logos-jupyter" },
+      name: "System Balancing Specialist – Business Data Validation",
+      url: "",
+      description: "Domain: Reinsurance | Role: ETL Developer | Methodology: Agile\n\nOwned the data validation and system balancing function within a large-scale integrated reinsurance platform, delivering precise end-to-end reconciliation of financial data across multiple business-rule tables, complex database views, and various packages. Designed and executed balancing checks to verify data integrity and consistency at every stage of the pipeline, from source ingestion through to final reporting. Managed the generation of daily and monthly reports, validating record counts, financial totals, and data accuracy to catch discrepancies before they reached downstream systems. Collaborated with development and business teams to investigate and resolve reconciliation breaks, ensuring reliable financial reporting and maintaining trust in the data across the platform.",
+      softwareSkills: [
+        { skillName: "Informatica PowerCenter", imageSrc: "informatica_powercenter.png" },
+        { skillName: "Oracle", imageSrc: "oracle.png" },
+        { skillName: "PL/SQL", imageSrc: "plsql.png" },
+        { skillName: "SQL Server", imageSrc: "sql_server.png" },
+        { skillName: "Unix", imageSrc: "unix_script.png" }
       ],
     },
     {
-      name: "Antivirus",
-      url: " ",
-      description:
-        "A project from 2012. Made an antivirus with realtime scanning. Implemented by using comparison of md5 hashes.",
-      languages: [
-        { name: "Visual Basic", iconifyClass: "logos-dotnet" },
+      name: "Policy/Billing Center to General Ledger via Data Warehouse",
+      url: "",
+      description: "Domain: Reinsurance | Role: ETL Developer\n\nDeveloped the end-to-end data migration flow moving accounting data from Policy Center / Billing Center (OLTP) into the Data Warehouse, then into the Data Mart, and finally to the General Ledger database. Engineered a wide range of transformations, aggregations, and business logic to handle the accounting data — including date-specific loads, duplicate removal, and incremental updates that load only new records via target-table lookups — along with a full reconciliation process. Organized the workflows into scheduled batches: daily loads from source to the Data Warehouse, monthly loads from Data Warehouse to Data Mart, and quarterly loads into the General Ledger, which then feeds downstream reporting.",
+      softwareSkills: [
+        { skillName: "Informatica PowerCenter", imageSrc: "informatica_powercenter.png" },
+        { skillName: "SQL Server", imageSrc: "sql_server.png" },
+        { skillName: "Batch Script", imageSrc: "batch_script.png" }
       ],
-    },
-    {
-      name: "Sugar on Windows",
-      url: " ",
-      description:
-        "Run and setup Sugar OS to be able to run on Windows using Windows Subsystem for Linux",
-      languages: [
-        { name: "Visual Basic", iconifyClass: "logos-dotnet" },
-        { name: "Python", iconifyClass: "logos-python" },
-      ],
-    },
-    {
-      name: "Object + Face Detection",
-      url: " ",
-      description: "2017 project. Object detection + accurate face detection.",
-      languages: [
-        { name: "Python", iconifyClass: "logos-python" },
-        { name: "Tensorflow", iconifyClass: "logos-tensorflow" },
-        { name: "OpenCV", iconifyClass: "logos-opencv" },
-      ],
-    },
-    {
-      name: "Image Captioning with Visual Attention",
-      url: " ",
-      description: "Ongoing. Used MSCOCO 2014/2017 for image captioning.",
-      languages: [
-        { name: "Python", iconifyClass: "logos-python" },
-        { name: "Tensorflow", iconifyClass: "logos-tensorflow" },
-        { name: "Jupyter Notebook", iconifyClass: "logos-jupyter" },
-      ],
-    },
-    {
-      name: "DalSocial",
-      url: " ",
-      description:
-        "An Android app to meet new people in the university, organize and join events. ",
-      languages: [
-        { name: "Kotlin", iconifyClass: "simple-icons:kotlin", color: "#F18E33" },
-        { name: "Android", iconifyClass: "simple-icons:android", color: "#3DDC84" },
-        { name: "Firebase", iconifyClass: "logos-firebase" },
-      ],
-    },
-    {
-      name: "HalifaxFoodie",
-      url: " ",
-      description:
-        "CSCI5410 Project. A multi-client recipe app for Halifax Foodies.",
-      languages: [
-        { name: "ReactJS", iconifyClass: "logos-react" },
-        { name: "AWS", iconifyClass: "logos-aws" },
-        { name: "Google Cloud", iconifyClass: "logos-google-cloud" },
-      ],
-    },
+    }
   ],
 };
 

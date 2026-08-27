@@ -1,11 +1,13 @@
 import React from "react";
-import ProjectLanguages from "../projectLanguages/ProjectLanguages";
+// Swapped out ProjectLanguages for your much better SoftwareSkill component!
+import SoftwareSkill from "../softwareSkills/SoftwareSkill";
 import "./ProjectCard.css";
 import { Fade } from "react-reveal";
 import { style } from "glamor";
 
 export default function ProjectCard({ repo: project, theme }) {
   function openRepoinNewTab(url) {
+    if (!url || url.trim() === "") return; // Protects against clicking projects with no URLs
     var win = window.open(url, "_blank");
     win.focus();
   }
@@ -15,7 +17,7 @@ export default function ProjectCard({ repo: project, theme }) {
     backgroundColor: "rgb(255, 255, 255)",
     boxShadow: "rgba(0, 0, 0, 0.2) 0px 10px 30px -15px",
     padding: "2rem",
-    cursor: "pointer",
+    cursor: project.url ? "pointer" : "default", // Only shows pointing finger if there's a URL
     borderRadius: "5px",
     height: "100%",
     transition: "all 0.2s ease-in-out",
@@ -34,15 +36,29 @@ export default function ProjectCard({ repo: project, theme }) {
           style={{ backgroundColor: theme.projectCard }}
         >
           <div className="repo-name-div">
-            <p className="repo-name" style={{ color: theme.text }}>
+            {/* Added the glowing CSS class here! */}
+            <p className="repo-name project-title-glow" style={{ color: theme.text }}>
               {project.name}
             </p>
           </div>
-          <p className="repo-description" style={{ color: theme.text }}>
-            {project.description}
-          </p>
+          
+          {/* Applied the large 22px font size to match the Home page */}
+          <div 
+            className="repo-description" 
+            style={{ color: theme.secondaryText, fontSize: "22px", lineHeight: "1.7" }}
+          >
+            {/* This splits your text at the line breaks so the Domain/Role sits neatly above the paragraph */}
+            {project.description.split('\n').map((line, index) => (
+              <span key={index}>
+                {line}
+                <br />
+              </span>
+            ))}
+          </div>
+          
           <div className="repo-details">
-            <ProjectLanguages logos={project.languages} />
+            {/* Rendering your exact PNG icons with animations and dark mode support! */}
+            <SoftwareSkill logos={project.softwareSkills} theme={theme} />
           </div>
         </div>
       </Fade>

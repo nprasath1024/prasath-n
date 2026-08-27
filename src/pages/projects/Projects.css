@@ -1,5 +1,7 @@
 .projects-main {
-  width: 100%;
+  width: 100vw;
+  max-width: 100%;
+  overflow-x: hidden;
   text-align: center;
 }
 
@@ -21,7 +23,12 @@
   justify-content: center;
 }
 
+/* Added Flexbox to perfectly center the heading text vertically next to the image */
 .projects-heading-text-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
@@ -36,7 +43,7 @@
   font-family: "Google Sans Medium";
   line-height: 1.1;
   text-align: center;
-  margin-top: 80px;
+  margin-top: 0px; /* Reduced from 80px so it centers naturally */
 }
 
 .projects-heading-sub-text {
@@ -67,7 +74,7 @@
 @media (max-width: 1380px) {
   .projects-heading-text {
     font-size: 50px;
-    margin-top: 80px;
+    margin-top: 0px;
   }
   .projects-heading-sub-text {
     font-size: 25px;
