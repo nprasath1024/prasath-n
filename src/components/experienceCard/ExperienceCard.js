@@ -10,7 +10,6 @@ function ExperienceCard(props) {
       style={{
         border: `1px solid ${experience["color"]}`,
         backgroundColor: theme.imageDark,
-        /* The broken height rule has been removed from here! */
       }}
     >
       <div className="experience-card-logo-div">
@@ -18,6 +17,12 @@ function ExperienceCard(props) {
           className="experience-card-logo"
           src={require(`../../assests/images/${experience["logo_path"]}`)}
           alt=""
+          /* THE SMART BACKLIGHT: Makes company/cert logos visible in dark mode */
+          style={
+            theme && theme.name === "dark" 
+            ? { backgroundColor: "#ffffff", borderRadius: "10px", padding: "5px" } 
+            : {}
+          }
         />
       </div>
       <div className="experience-card-body-div">
@@ -40,7 +45,6 @@ function ExperienceCard(props) {
             </p>
           </div>
           
-          {/* Only render the right side if there is actual duration or location data */}
           {(experience["duration"] || experience["location"]) && (
             <div className="experience-card-heading-right">
               {experience["duration"] && (
@@ -63,7 +67,6 @@ function ExperienceCard(props) {
           )}
         </div>
         
-        {/* Only render the description if it contains text, stripping out empty spaces */}
         {experience["description"] && experience["description"].trim() !== "" && (
           <p
             className="experience-card-description"

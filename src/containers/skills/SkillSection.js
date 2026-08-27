@@ -7,9 +7,7 @@ import { Fade } from "react-reveal";
 function SkillSection(props) {
   const theme = props.theme;
 
-  // This function scans your bullet points for the tools and applies the glowing CSS class
   const highlightText = (text) => {
-    // Ordered longest to shortest so tools don't get accidentally chopped
     const keywords = [
       "SQL Server Management Studio (SSMS)",
       "HP Quality Center (ALM)",
@@ -46,7 +44,6 @@ function SkillSection(props) {
       "Git"
     ];
     
-    // Properly escapes characters and creates an 'OR' list for the search
     const escapedKeywords = keywords.map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
     const regex = new RegExp(`(${escapedKeywords.join('|')})`, 'gi');
     
@@ -57,7 +54,7 @@ function SkillSection(props) {
       if (isKeyword) {
         return <span key={index} className="tech-highlight">{part}</span>;
       }
-      return <span key={index}>{part}</span>; // Standard text without the glow
+      return <span key={index}>{part}</span>; 
     });
   };
 
@@ -81,7 +78,8 @@ function SkillSection(props) {
               
               {skill.softwareSkills && skill.softwareSkills.length > 0 && (
                 <Fade right duration={1500}>
-                  <SoftwareSkill logos={skill.softwareSkills} />
+                  {/* FIXED: We are now explicitly passing the theme down into the SoftwareSkill component! */}
+                  <SoftwareSkill logos={skill.softwareSkills} theme={theme} />
                 </Fade>
               )}
 
