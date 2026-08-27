@@ -38,7 +38,7 @@
 }
 
 .repo-name {
-  white-space: normal; /* Allows long titles to wrap */
+  white-space: normal;
   line-height: 1.2;
   text-overflow: ellipsis;
   color: rgb(36, 41, 46);
@@ -49,7 +49,6 @@
   margin: 0px;
 }
 
-/* THE GLOW FOR PROJECT TITLES */
 .project-title-glow {
   color: #ffffff !important;
   text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.4);
@@ -60,9 +59,10 @@
 }
 
 .repo-description {
+  font-size: 22px; /* DESKTOP FONT SIZE */
   word-wrap: break-word;
-  text-align: justify; /* Makes large paragraphs look neat */
-  display: block; /* Removed the 4-line limit so it shows all your text! */
+  text-align: justify;
+  display: block; 
   font-family: "Google Sans Regular";
   margin-top: 15px;
 }
@@ -70,7 +70,7 @@
 .repo-details {
   display: flex;
   flex-direction: row;
-  margin-top: 20px; /* Gives breathing room between text and logos */
+  margin-top: 20px;
 }
 
 .repo-creation-date {
@@ -85,6 +85,11 @@
   .repo-name {
     font-size: 20px;
   }
+  
+  .repo-description {
+    font-size: 16px; /* MOBILE FONT SIZE */
+  }
+  
   .repo-details {
     flex-direction: column;
   }

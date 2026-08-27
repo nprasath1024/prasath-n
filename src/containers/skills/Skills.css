@@ -10,7 +10,7 @@
 }
 
 .skills-text {
-  font-size: 20px;
+  font-size: 22px; /* DESKTOP FONT SIZE */
 }
 
 .skills-text-div {
@@ -39,14 +39,13 @@
   font-family: "Google Sans Regular";
 }
 
-/* --- ADDED BEAUTIFUL, SOFT WHITE GLOW FOR TECH TOOLS --- */
 .tech-highlight {
   color: #ffffff;
-  text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.3); /* Softened the glow considerably */
+  text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.3);
   font-weight: 600;
 }
 
-/* Media Query */
+/* Media Query for Mobile */
 @media (max-width: 1380px) {
   .skills-heading {
     font-size: 40px;
@@ -75,7 +74,7 @@
     margin: 20px;
   }
   .skills-text {
-    font-size: 16px;
+    font-size: 16px; /* MOBILE FONT SIZE */
   }
   .skills-text-subtitle {
     font-size: 16px;

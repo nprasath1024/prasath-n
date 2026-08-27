@@ -78,7 +78,6 @@ function SkillSection(props) {
               
               {skill.softwareSkills && skill.softwareSkills.length > 0 && (
                 <Fade right duration={1500}>
-                  {/* FIXED: We are now explicitly passing the theme down into the SoftwareSkill component! */}
                   <SoftwareSkill logos={skill.softwareSkills} theme={theme} />
                 </Fade>
               )}
@@ -90,7 +89,7 @@ function SkillSection(props) {
                       <p
                         key={i}
                         className="subTitle skills-text"
-                        style={{ color: theme.secondaryText, marginBottom: "15px", lineHeight: "1.7", fontSize: "22px" }}
+                        style={{ color: theme.secondaryText, marginBottom: "15px", lineHeight: "1.7" }}
                       >
                         {highlightText(skillSentence)}
                       </p>
