@@ -44,7 +44,8 @@ const skills = {
         { skillName: "PuTTY", imageSrc: "putty.png" },
         { skillName: "GitHub", imageSrc: "github.png" },
         { skillName: "VS Code", imageSrc: "vscode.png" },
-        { skillName: "Guidewire", imageSrc: "guidewire.png" }
+        { skillName: "Guidewire", imageSrc: "guidewire.png" },
+        { skillName: "PROCEDE", imageSrc: "proceed.png" }
       ],
     },
 

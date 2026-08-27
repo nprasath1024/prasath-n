@@ -1,23 +1,73 @@
+.software-skills-main-div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
 .dev-icons {
-  padding-left: 0;
+  padding: 0;
+  margin: 0;
   list-style: none;
-  font-size: 3rem;
-  margin-bottom: 0px;
-  margin-top: 0px;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .software-skill-inline {
-  display: inline-block;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 30px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+}
+
+/* THE COOL ANIMATION: Scale up and float slightly on hover */
+.software-skill-inline:hover {
+  transform: scale(1.25) translateY(-5px);
+}
+
+/* THE STRAITJACKET: Locks all PNGs to a perfect, uniform square */
+.skill-image {
+  width: 55px;
+  height: 55px;
+  object-fit: contain; /* Prevents uneven stretching */
+  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.3)); /* Adds a soft 3D pop */
+  margin-bottom: 8px;
+}
+
+/* The original template style tooltip text */
+.skill-title {
+  margin: 0;
+  font-size: 14px;
   font-family: "Google Sans Regular";
-}
-
-.software-skill-inline > i {
   color: #868e96;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease-in-out;
+  position: absolute;
+  top: 65px; /* Pushes text right below the icon */
+  white-space: nowrap;
 }
 
-.software-skill-inline > i:hover {
-  color: #645beb;
+.software-skill-inline:hover .skill-title {
+  opacity: 1; /* Fades in smoothly on hover */
+  color: #ffffff; 
+}
+
+@media (max-width: 768px) {
+  .skill-image {
+    width: 40px;
+    height: 40px;
+  }
+  .software-skill-inline {
+    margin: 10px 15px;
+  }
+  .skill-title {
+    top: 50px;
+    font-size: 12px;
+  }
 }
