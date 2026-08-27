@@ -4,6 +4,12 @@ import "./ExperienceCard.css";
 function ExperienceCard(props) {
   const experience = props.experience;
   const theme = props.theme;
+  
+  // FIXED: Dynamic colors to ensure high contrast in Light Mode
+  const titleColor = theme.name === "dark" ? theme.text : "#000000";
+  const subtitleColor = theme.name === "dark" ? theme.secondaryText : "#333333";
+  const descriptionColor = theme.name === "dark" ? theme.text : "#1f2229";
+
   return (
     <div
       className="experience-card"
@@ -17,7 +23,6 @@ function ExperienceCard(props) {
           className="experience-card-logo"
           src={require(`../../assests/images/${experience["logo_path"]}`)}
           alt=""
-          /* THE SMART BACKLIGHT: Makes company/cert logos visible in dark mode */
           style={
             theme && theme.name === "dark" 
             ? { backgroundColor: "#ffffff", borderRadius: "10px", padding: "5px" } 
@@ -28,12 +33,12 @@ function ExperienceCard(props) {
       <div className="experience-card-body-div">
         <div className="experience-card-header-div">
           <div className="experience-card-heading-left">
-            <h3 className="experience-card-title" style={{ color: theme.text }}>
+            <h3 className="experience-card-title" style={{ color: titleColor }}>
               {experience["title"]}
             </h3>
             <p
               className="experience-card-company"
-              style={{ color: theme.secondaryText }}
+              style={{ color: subtitleColor }}
             >
               <a
                 href={experience["company_url"]}
@@ -50,7 +55,7 @@ function ExperienceCard(props) {
               {experience["duration"] && (
                 <p
                   className="experience-card-duration"
-                  style={{ color: theme.secondaryText }}
+                  style={{ color: subtitleColor }}
                 >
                   {experience["duration"]}
                 </p>
@@ -58,7 +63,7 @@ function ExperienceCard(props) {
               {experience["location"] && (
                 <p
                   className="experience-card-location"
-                  style={{ color: theme.secondaryText }}
+                  style={{ color: subtitleColor }}
                 >
                   {experience["location"]}
                 </p>
@@ -70,7 +75,7 @@ function ExperienceCard(props) {
         {experience["description"] && experience["description"].trim() !== "" && (
           <p
             className="experience-card-description"
-            style={{ color: theme.text }}
+            style={{ color: descriptionColor }}
           >
             {experience["description"]}
           </p>

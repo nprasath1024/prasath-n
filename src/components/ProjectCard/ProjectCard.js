@@ -35,14 +35,23 @@ export default function ProjectCard({ repo: project, theme }) {
           style={{ backgroundColor: theme.projectCard }}
         >
           <div className="repo-name-div">
-            <p className="repo-name project-title-glow" style={{ color: theme.text }}>
+            {/* FIXED: Dynamic title styling. White glow for dark mode, bold purple for light mode */}
+            <p 
+              className="repo-name" 
+              style={
+                theme.name === "dark" 
+                  ? { color: "#ffffff", textShadow: "0px 0px 4px rgba(255, 255, 255, 0.4)" } 
+                  : { color: "#a435f0" }
+              }
+            >
               {project.name}
             </p>
           </div>
           
           <div 
             className="repo-description" 
-            style={{ color: theme.secondaryText, lineHeight: "1.7" }}
+            /* FIXED: Uses a darker grey (#333333) in light mode instead of the faded secondary text */
+            style={{ color: theme.name === "dark" ? theme.secondaryText : "#333333", lineHeight: "1.7" }}
           >
             {project.description.split('\n').map((line, index) => (
               <span key={index}>
