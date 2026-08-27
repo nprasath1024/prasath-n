@@ -79,61 +79,32 @@ function Header(props) {
           </label>
           <ul className="menu">
             <li>
-              <NavLink
-                className="homei"
-                to="/home"
-                tag={Link}
-                activeStyle={{ fontWeight: "bold" }}
-                style={{ borderRadius: 5, color: theme.text }}
-              >
+              <NavLink className="homei" to="/home" tag={Link} activeStyle={{ fontWeight: "bold" }} style={{ borderRadius: 5, color: theme.text }}>
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink
-                className="ec"
-                to="/education"
-                tag={Link}
-                activeStyle={{ fontWeight: "bold" }}
-                style={{ borderRadius: 5, color: theme.text }}
-              >
-                Education and Certification
+              {/* Renamed to just Education */}
+              <NavLink className="ec" to="/education" tag={Link} activeStyle={{ fontWeight: "bold" }} style={{ borderRadius: 5, color: theme.text }}>
+                Education
               </NavLink>
             </li>
             <li>
-              <NavLink
-                className="xp"
-                to="/experience"
-                tag={Link}
-                activeStyle={{ fontWeight: "bold" }}
-                style={{ borderRadius: 5, color: theme.text }}
-              >
-                Experience
+              {/* Renamed to Experience and Certification */}
+              <NavLink className="xp" to="/experience" tag={Link} activeStyle={{ fontWeight: "bold" }} style={{ borderRadius: 5, color: theme.text }}>
+                Experience and Certification
               </NavLink>
             </li>
             <li>
-              <NavLink
-                className="projects"
-                to="/projects"
-                tag={Link}
-                activeStyle={{ fontWeight: "bold" }}
-                style={{ borderRadius: 5, color: theme.text }}
-              >
+              <NavLink className="projects" to="/projects" tag={Link} activeStyle={{ fontWeight: "bold" }} style={{ borderRadius: 5, color: theme.text }}>
                 Projects
               </NavLink>
             </li>
             <li>
-              <NavLink
-                className="cr"
-                to="/contact"
-                tag={Link}
-                activeStyle={{ fontWeight: "bold" }}
-                style={{ borderRadius: 5, color: theme.text }}
-              >
+              <NavLink className="cr" to="/contact" tag={Link} activeStyle={{ fontWeight: "bold" }} style={{ borderRadius: 5, color: theme.text }}>
                 Contact and Resume
               </NavLink>
             </li>
-            {/* The button is completely restored to its original placement without the <li> wrapper */}
             <button {...styles} onClick={changeTheme}>
               {icon}
             </button>

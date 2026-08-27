@@ -22,7 +22,12 @@
   justify-content: center;
 }
 
+/* Added Flexbox to perfectly center the heading text vertically next to the image */
 .heading-text-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
@@ -37,7 +42,7 @@
   font-family: "Google Sans Medium";
   line-height: 1.1;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 0px; /* Changed from 100px so it centers naturally */
 }
 
 .heading-sub-text {
@@ -49,7 +54,7 @@
 @media (max-width: 1380px) {
   .heading-text {
     font-size: 50px;
-    margin-top: 80px;
+    margin-top: 0px;
   }
   .heading-sub-text {
     font-size: 25px;

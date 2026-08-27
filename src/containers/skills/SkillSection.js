@@ -6,11 +6,37 @@ import { Fade } from "react-reveal";
 
 function SkillSection(props) {
   const theme = props.theme;
+
+  // This function automatically finds your tech stack tools and applies the glow CSS class
+  const highlightText = (text) => {
+    const keywords = [
+      "Informatica", "PowerCenter", "PowerExchange", "IICS", "Oracle",
+      "Microsoft SQL Server", "PL/SQL", "SQL Server Management Studio (SSMS)",
+      "SSMS", "Toad", "PuTTY", "Eclipse", "UltraEdit", "Git", "GitHub",
+      "Visual Studio Code", "Unix Shell", "Batch", "AutoSys", "JIL scripts",
+      "PROCEDE", "Guidewire ClaimCenter", "Rally", "HP Quality Center (ALM)",
+      "Jira", "Core Java", "HTML/CSS", "Data Warehouse", "Data Mart", "Agile methodology"
+    ];
+    
+    // Scans the sentence for any of the exact keywords
+    const regex = new RegExp(`(${keywords.join('|').replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+    const parts = text.split(regex);
+
+    return parts.map((part, index) => {
+      const isKeyword = keywords.some(k => k.toLowerCase() === part.toLowerCase());
+      if (isKeyword) {
+        return <span key={index} className="tech-highlight">{part}</span>;
+      }
+      return part;
+    });
+  };
+
   return (
     <div>
       <Fade bottom duration={2000} distance="20px">
+        {/* Changed Expertise to Experience */}
         <h1 className="skills-heading" style={{ color: theme.text, textAlign: "center", margin: "40px 0" }}>
-          Technical And Functional Expertise
+          Technical And Functional Experience
         </h1>
       </Fade>
 
@@ -37,10 +63,10 @@ function SkillSection(props) {
                       <p
                         key={i}
                         className="subTitle skills-text"
-                        // Increased fontSize to 19px for better readability
-                        style={{ color: theme.secondaryText, marginBottom: "15px", lineHeight: "1.7", fontSize: "19px" }}
+                        // Increased fontSize to 22px so it is very easy to read!
+                        style={{ color: theme.secondaryText, marginBottom: "15px", lineHeight: "1.7", fontSize: "22px" }}
                       >
-                        {skillSentence}
+                        {highlightText(skillSentence)}
                       </p>
                     );
                   })}
