@@ -73,6 +73,12 @@ function Header(props) {
             </span>
             <span style={{ color: theme.text }}></span>
           </NavLink>
+          
+          {/* FIXED: Button is moved outside the <ul> menu so it doesn't get hidden on mobile */}
+          <button {...styles} className="theme-toggle-btn" onClick={changeTheme}>
+            {icon}
+          </button>
+
           <input className="menu-btn" type="checkbox" id="menu-btn" />
           <label className="menu-icon" htmlFor="menu-btn">
             <span className="navicon"></span>
@@ -98,7 +104,6 @@ function Header(props) {
                 Projects
               </NavLink>
             </li>
-            {/* ADDED THE NEW MENU LINK HERE */}
             <li>
               <NavLink className="sa" to="/specialisation" tag={Link} activeStyle={{ fontWeight: "bold" }} style={{ borderRadius: 5, color: theme.text }}>
                 Specialisation and Awards
@@ -109,9 +114,6 @@ function Header(props) {
                 Contact and Resume
               </NavLink>
             </li>
-            <button {...styles} onClick={changeTheme}>
-              {icon}
-            </button>
           </ul>
         </header>
       </div>

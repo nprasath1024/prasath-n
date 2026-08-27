@@ -168,7 +168,6 @@
   color: #ffffff !important;
 }
 
-/* ADDED THE SPECIALISATION & AWARDS PURPLE HOVER */
 .sa {
   margin: 2px 5px 20px;
   transition: all 0.2s ease-in-out;
@@ -206,6 +205,10 @@
   }
   .header .menu {
     max-height: none;
+    order: 2; /* Keeps the navigation links perfectly centered */
+  }
+  .theme-toggle-btn {
+    order: 3; /* Pushes the theme toggle to the far right side of the screen */
   }
   .header .menu-icon {
     display: none;
@@ -220,6 +223,13 @@
     text-decoration: none;
     margin-top: 15px;
     line-height: normal;
+  }
+  
+  /* FIXED: Floats the toggle button next to the hamburger menu on mobile */
+  .theme-toggle-btn {
+    float: right;
+    margin-top: 15px;
+    margin-right: 15px; 
   }
 
   .header {

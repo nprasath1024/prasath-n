@@ -52,7 +52,12 @@ function SkillSection(props) {
     return parts.map((part, index) => {
       const isKeyword = keywords.some(k => k.toLowerCase() === part.toLowerCase());
       if (isKeyword) {
-        return <span key={index} className="tech-highlight">{part}</span>;
+        /* FIXED: Dynamically applies white glow for dark mode, and bold purple for light mode */
+        const highlightStyle = theme.name === "dark" 
+          ? { color: "#ffffff", textShadow: "0px 0px 4px rgba(255, 255, 255, 0.3)", fontWeight: 600 }
+          : { color: "#a435f0", fontWeight: 700 }; 
+
+        return <span key={index} style={highlightStyle}>{part}</span>;
       }
       return <span key={index}>{part}</span>; 
     });

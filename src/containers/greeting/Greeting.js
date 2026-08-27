@@ -44,7 +44,7 @@ export default function Greeting(props) {
                   style={{ 
                     display: "inline-block", 
                     textDecoration: "none", 
-                    width: "285px", 
+                    width: "260px", /* Reduced from 285px to perfectly align with the Instagram icon */
                     textAlign: "center", 
                     marginLeft: "0px", 
                     boxSizing: "border-box" 
