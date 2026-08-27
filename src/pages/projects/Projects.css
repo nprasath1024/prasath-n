@@ -23,7 +23,6 @@
   justify-content: center;
 }
 
-/* Added Flexbox to perfectly center the heading text vertically next to the image */
 .projects-heading-text-div {
   display: flex;
   flex-direction: column;
@@ -43,7 +42,7 @@
   font-family: "Google Sans Medium";
   line-height: 1.1;
   text-align: center;
-  margin-top: 0px; /* Reduced from 80px so it centers naturally */
+  margin-top: 0px; 
 }
 
 .projects-heading-sub-text {
@@ -62,10 +61,11 @@
   font-family: "Google Sans Medium";
 }
 
+/* THE FIX: Changed from Grid to Flexbox Column to stack cards vertically */
 .repo-cards-div-main {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 50px; /* Beautiful, wide 50px spacing between each stacked project! */
   margin-left: 40px;
   margin-right: 40px;
   margin-top: 60px;
@@ -103,8 +103,11 @@
     text-align: center;
   }
 
+  /* Fixed mobile layout to keep vertical stacking with good spacing */
   .repo-cards-div-main {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 30px;
