@@ -9,8 +9,9 @@
   text-align: center;
 }
 
+/* FIXED: Added !important to force the desktop size to stay large! */
 .skills-text {
-  font-size: 22px; /* DESKTOP FONT SIZE */
+  font-size: 22px !important; 
 }
 
 .skills-text-div {
@@ -73,9 +74,12 @@
     margin-left: 0px;
     margin: 20px;
   }
+  
+  /* FIXED: Added !important for the mobile size */
   .skills-text {
-    font-size: 16px; /* MOBILE FONT SIZE */
+    font-size: 16px !important; 
   }
+  
   .skills-text-subtitle {
     font-size: 16px;
     text-align: center;

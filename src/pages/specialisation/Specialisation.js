@@ -7,7 +7,7 @@ import ProjectsImg from "../projects/ProjectsImg";
 import EducationImg from "../education/EducationImg";
 import { Fade } from "react-reveal";
 import { specialisations, awards } from "../../portfolio.js";
-import "./Specialisation.css"; /* IMPORTS THE NEW RESPONSIVE CSS */
+import "./Specialisation.css";
 
 function Specialisation(props) {
   const theme = props.theme;
@@ -19,13 +19,16 @@ function Specialisation(props) {
       {/* --- SPECIALISATION SECTION --- */}
       <div style={{ marginLeft: "5%", marginRight: "5%", marginTop: "20px" }}>
         <Fade bottom duration={2000} distance="40px">
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-            <div style={{ maxWidth: "100%", height: "auto" }}>
+          {/* FIXED: Using the flexbox layout to restrain the SVG image */}
+          <div className="specialisation-heading-div">
+            <div className="specialisation-heading-img-div">
               <ProjectsImg theme={theme} />
             </div>
-            <h1 className="specialisation-heading-text" style={{ color: theme.text }}>
-              Specialisation
-            </h1>
+            <div className="specialisation-heading-text-div">
+              <h1 className="specialisation-heading-text" style={{ color: theme.text }}>
+                Specialisation
+              </h1>
+            </div>
           </div>
         </Fade>
         
@@ -39,13 +42,16 @@ function Specialisation(props) {
       {/* --- AWARDS SECTION --- */}
       <div className="awards-section" style={{ marginLeft: "5%", marginRight: "5%" }}>
         <Fade bottom duration={2000} distance="40px">
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-            <div style={{ maxWidth: "100%", height: "auto" }}>
+          {/* FIXED: Using the flexbox layout to restrain the SVG image */}
+          <div className="specialisation-heading-div">
+            <div className="specialisation-heading-img-div">
               <EducationImg theme={theme} />
             </div>
-            <h1 className="specialisation-heading-text" style={{ color: theme.text }}>
-              Awards
-            </h1>
+            <div className="specialisation-heading-text-div">
+              <h1 className="specialisation-heading-text" style={{ color: theme.text }}>
+                Awards
+              </h1>
+            </div>
           </div>
         </Fade>
         

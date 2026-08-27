@@ -4,8 +4,37 @@
   overflow-x: hidden;
 }
 
+/* NEW: Flexbox layout to properly restrain image sizes */
+.specialisation-heading-div {
+  display: flex;
+  align-items: center;
+}
+
+.specialisation-heading-div > * {
+  flex: 1;
+}
+
+.specialisation-heading-img-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.specialisation-heading-img-div > * {
+  max-width: 100%;
+  height: auto;
+}
+
+.specialisation-heading-text-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 .specialisation-heading-text {
-  font-size: 56px; /* DESKTOP HEADING SIZE */
+  font-size: 56px;
   font-weight: 400;
   font-family: "Google Sans Medium";
   margin-top: 0px;
@@ -31,8 +60,14 @@
 }
 
 @media (max-width: 768px) {
+  /* NEW: Forces the grid to stack as a column on mobile */
+  .specialisation-heading-div {
+    flex-direction: column;
+    text-align: center;
+  }
+
   .specialisation-heading-text {
-    font-size: 30px; /* MOBILE HEADING SIZE */
+    font-size: 30px;
     margin-top: 20px;
   }
   
