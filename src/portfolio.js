@@ -45,7 +45,8 @@ const skills = {
         { skillName: "GitHub", imageSrc: "github.png" },
         { skillName: "VS Code", imageSrc: "vscode.png" },
         { skillName: "Guidewire", imageSrc: "guidewire.png" },
-        { skillName: "PROCEDE", imageSrc: "proceed.png" }
+        /* FIXED: Spelled perfectly as procede.png to match your file! */
+        { skillName: "PROCEDE", imageSrc: "procede.png" } 
       ],
     },
 
