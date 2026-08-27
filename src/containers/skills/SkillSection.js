@@ -7,19 +7,47 @@ import { Fade } from "react-reveal";
 function SkillSection(props) {
   const theme = props.theme;
 
-  // This function automatically finds your tech stack tools and applies the glow CSS class
+  // This function scans your bullet points for the tools and applies the glowing CSS class
   const highlightText = (text) => {
+    // Ordered longest to shortest so tools like "Microsoft SQL Server" don't get accidentally chopped by "SQL Server"
     const keywords = [
-      "Informatica", "PowerCenter", "PowerExchange", "IICS", "Oracle",
-      "Microsoft SQL Server", "PL/SQL", "SQL Server Management Studio (SSMS)",
-      "SSMS", "Toad", "PuTTY", "Eclipse", "UltraEdit", "Git", "GitHub",
-      "Visual Studio Code", "Unix Shell", "Batch", "AutoSys", "JIL scripts",
-      "PROCEDE", "Guidewire ClaimCenter", "Rally", "HP Quality Center (ALM)",
-      "Jira", "Core Java", "HTML/CSS", "Data Warehouse", "Data Mart", "Agile methodology"
+      "SQL Server Management Studio (SSMS)",
+      "HP Quality Center (ALM)",
+      "Guidewire ClaimCenter",
+      "Microsoft SQL Server",
+      "Informatica PowerCenter",
+      "PowerExchange",
+      "Visual Studio Code",
+      "Agile methodology",
+      "Data Warehouse",
+      "Data Mart",
+      "PowerCenter",
+      "Informatica",
+      "Core Java",
+      "HTML/CSS",
+      "Unix Shell",
+      "JIL scripts",
+      "AutoSys",
+      "PROCEDE",
+      "Eclipse",
+      "UltraEdit",
+      "GitHub",
+      "PL/SQL",
+      "Oracle",
+      "Toad",
+      "PuTTY",
+      "Batch",
+      "Rally",
+      "Jira",
+      "IICS",
+      "SSMS",
+      "Git"
     ];
     
-    // Scans the sentence for any of the exact keywords
-    const regex = new RegExp(`(${keywords.join('|').replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+    // Fixed: Properly escapes characters and creates an 'OR' list for the search
+    const escapedKeywords = keywords.map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+    const regex = new RegExp(`(${escapedKeywords.join('|')})`, 'gi');
+    
     const parts = text.split(regex);
 
     return parts.map((part, index) => {
@@ -27,14 +55,13 @@ function SkillSection(props) {
       if (isKeyword) {
         return <span key={index} className="tech-highlight">{part}</span>;
       }
-      return part;
+      return <span key={index}>{part}</span>; // Standard text without the glow
     });
   };
 
   return (
     <div>
       <Fade bottom duration={2000} distance="20px">
-        {/* Changed Expertise to Experience */}
         <h1 className="skills-heading" style={{ color: theme.text, textAlign: "center", margin: "40px 0" }}>
           Technical And Functional Experience
         </h1>
@@ -57,13 +84,13 @@ function SkillSection(props) {
               )}
 
               <Fade right duration={2000}>
-                <div style={{ marginTop: "20px" }}>
+                {/* Changed marginTop from 20px to 40px to create 1-2 lines of space below the heading */}
+                <div style={{ marginTop: "40px" }}>
                   {skill.skills.map((skillSentence, i) => {
                     return (
                       <p
                         key={i}
                         className="subTitle skills-text"
-                        // Increased fontSize to 22px so it is very easy to read!
                         style={{ color: theme.secondaryText, marginBottom: "15px", lineHeight: "1.7", fontSize: "22px" }}
                       >
                         {highlightText(skillSentence)}
