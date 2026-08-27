@@ -4,6 +4,8 @@
   border-radius: 10px;
   display: flex;
   flex-direction: row;
+  min-height: 125px; /* Locks every card to this perfectly uniform size */
+  align-items: center; /* Vertically centers the logo and text inside the taller boxes */
 }
 
 .experience-card-logo-div {

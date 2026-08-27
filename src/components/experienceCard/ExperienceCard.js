@@ -10,7 +10,7 @@ function ExperienceCard(props) {
       style={{
         border: `1px solid ${experience["color"]}`,
         backgroundColor: theme.imageDark,
-        height: "100%", // Forces all cards in the same row to be perfectly uniform in height
+        /* The broken height rule has been removed from here! */
       }}
     >
       <div className="experience-card-logo-div">
