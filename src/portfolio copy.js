@@ -130,6 +130,7 @@ const certifications = {
   certifications: [],
 };
 
+// Experience Page
 const experience = {
   title: "Experience",
   subtitle: "Work Experience",
@@ -336,82 +337,6 @@ const projects = {
   ],
 };
 
-const specialisations = {
-  data: [
-    {
-      name: "System Balancing Specialist – Business Data Validation",
-      url: "",
-      description: "Led data validation and system balancing processes across a large-scale integrated system, ensuring precise end-to-end reconciliation of financial data across multiple business-rule tables, complex database views, and various packages. Managed the generation of daily and monthly reports by validating data integrity and consistency throughout the pipeline.",
-      softwareSkills: [], 
-    },
-    {
-      name: "ETL Process Control and Data Auditing Expert",
-      url: "",
-      description: "Designed and implemented robust process-control measures for complex ETL pipelines, ensuring data integrity across staging and multiple permanent target tables within the insurance domain. Established end-to-end financial and data-volume reconciliation between mapping stages, leveraging process IDs and benchmark measures to monitor execution and prevent data loss. Maintained comprehensive auditing and error-logging frameworks that enabled real-time monitoring, error tracking, and seamless data filtering across large-scale processing runs.",
-      softwareSkills: [],
-    },
-    {
-      name: "Release Coordinator (Subject Matter Expert)",
-      url: "",
-      description: "Served as SME and single point of contact for end-to-end release management across ETL environments, handling both regular (weekly/bi-weekly) and major quarterly releases. Responsible for preparing implementation plans and release documentation, raising deployment tickets to the various teams involved, and coordinating and communicating across development, QA, DBA, and business teams to ensure release readiness. Managed deployment of Informatica (PowerCenter/IICS) code, AutoSys JIL jobs, and Unix/Batch scripts, and performed post-production checkout and validation to confirm successful releases, resolving any deployment issues during the release window.",
-      softwareSkills: [],
-    },
-    {
-      name: "GitHub Copilot Point of Contact – AI Adherence and Compliance",
-      url: "",
-      description: "Served as the primary Point of Contact for GitHub Copilot, overseeing team adherence to AI coding guidelines, monitoring code commits, and generating usage and compliance reports.",
-      softwareSkills: [],
-    },
-    {
-      name: "Business Continuity Management POC – Disaster Recovery and Remote Work Continuity",
-      url: "",
-      description: "Served as the primary Point of Contact and critical resource for Business Continuity Management, handling emergency protocols, coordinating swift transitions to remote work during disruptions, and maintaining clear communication with the team and stakeholders.",
-      softwareSkills: [],
-    },
-    {
-      name: "Agile Project Execution Expert – End-to-End Delivery and Team Collaboration",
-      url: "",
-      description: "Experienced in end-to-end Agile project execution, including PI planning, sprint planning, retrospectives, and daily stand-ups. Skilled in creating user stories and features, leading estimation sessions, and managing task allocation and defect tracking to ensure smooth, on-time project delivery.",
-      softwareSkills: [],
-    }
-  ],
-};
-
-const awards = {
-  data: [
-    {
-      title: "Live Wire R&R Award",
-      company: "HCL Technologies",
-      logo_path: "hcl.png",
-      color: "#004b8d",
-    },
-    {
-      title: "Good Performer of the Quarter",
-      company: "HCL Technologies",
-      logo_path: "hcl.png",
-      color: "#004b8d",
-    },
-    {
-      title: "Always Striving, Never Settling",
-      company: "Cognizant Technology Solutions",
-      logo_path: "cognizant.png",
-      color: "#1a3673",
-    },
-    {
-      title: "Working as One",
-      company: "Cognizant Technology Solutions",
-      logo_path: "cognizant.png",
-      color: "#1a3673",
-    },
-    {
-      title: "Certificate of Excellence – Team Excellence Award",
-      company: "Cognizant Technology Solutions",
-      logo_path: "cognizant.png",
-      color: "#1a3673",
-    }
-  ]
-};
-
 export {
   settings,
   greeting,
@@ -423,6 +348,4 @@ export {
   projectsHeader,
   contactPageData,
   projects,
-  specialisations,
-  awards
 };

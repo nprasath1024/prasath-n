@@ -3,7 +3,7 @@ import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import { Fade } from "react-reveal";
-import { projectsHeader, projects, socialMediaLinks } from "../../portfolio.js";
+import { projectsHeader, projects } from "../../portfolio.js";
 import "./Projects.css";
 import ProjectsImg from "./ProjectsImg";
 import { style } from "glamor";
@@ -28,16 +28,10 @@ function Projects(props) {
               <ProjectsImg theme={theme} />
             </div>
             <div className="projects-heading-text-div">
-              <h1
-                className="projects-heading-text"
-                style={{ color: theme.text }}
-              >
+              <h1 className="projects-heading-text" style={{ color: theme.text }}>
                 {projectsHeader.title}
               </h1>
-              <p
-                className="projects-header-detail-text subTitle"
-                style={{ color: theme.secondaryText }}
-              >
+              <p className="projects-header-detail-text subTitle" style={{ color: theme.secondaryText }}>
                 {projectsHeader["description"]}
               </p>
             </div>
@@ -46,18 +40,19 @@ function Projects(props) {
       </div>
       <div className="repo-cards-div-main">
         {projects.data.map((repo) => {
-          return <ProjectCard repo={repo} theme={theme} />;
+          return <ProjectCard repo={repo} theme={theme} key={repo.name} />;
         })}
       </div>
       <br />
       <br />
       <br />
+      {/* THIS IS NOW A DUMMY BUTTON */}
       <a
         {...styles}
         className="general-btn"
-        href={socialMediaLinks.github}
-        target="_blank"
-        rel="noopener noreferrer"
+        href="#"
+        onClick={(e) => e.preventDefault()} 
+        style={{ cursor: "default" }}
       >
         More Projects (Github)
       </a>

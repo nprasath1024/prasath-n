@@ -84,13 +84,11 @@ function Header(props) {
               </NavLink>
             </li>
             <li>
-              {/* Renamed to just Education */}
               <NavLink className="ec" to="/education" tag={Link} activeStyle={{ fontWeight: "bold" }} style={{ borderRadius: 5, color: theme.text }}>
                 Education
               </NavLink>
             </li>
             <li>
-              {/* Renamed to Experience and Certification */}
               <NavLink className="xp" to="/experience" tag={Link} activeStyle={{ fontWeight: "bold" }} style={{ borderRadius: 5, color: theme.text }}>
                 Experience and Certification
               </NavLink>
@@ -98,6 +96,12 @@ function Header(props) {
             <li>
               <NavLink className="projects" to="/projects" tag={Link} activeStyle={{ fontWeight: "bold" }} style={{ borderRadius: 5, color: theme.text }}>
                 Projects
+              </NavLink>
+            </li>
+            {/* ADDED THE NEW MENU LINK HERE */}
+            <li>
+              <NavLink className="sa" to="/specialisation" tag={Link} activeStyle={{ fontWeight: "bold" }} style={{ borderRadius: 5, color: theme.text }}>
+                Specialisation and Awards
               </NavLink>
             </li>
             <li>
