@@ -192,16 +192,21 @@
   color: #ffffff !important;
 }
 
-/* --- THE NEW GLOWING ANIMATION --- */
+/* --- UI/UX MOBILE MENU ANIMATIONS --- */
 @keyframes mobile-menu-glow {
+  0% { box-shadow: 0 0 2px #fb1056; }
+  50% { box-shadow: 0 0 12px #fb1056, 0 0 18px #fb1056; }
+  100% { box-shadow: 0 0 2px #fb1056; }
+}
+
+@keyframes radar-ping {
   0% {
-    box-shadow: 0 0 2px #fb1056;
-  }
-  50% {
-    box-shadow: 0 0 12px #fb1056, 0 0 18px #fb1056;
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0.8;
   }
   100% {
-    box-shadow: 0 0 2px #fb1056;
+    transform: translate(-50%, -50%) scale(1.6);
+    opacity: 0;
   }
 }
 
@@ -248,17 +253,36 @@
     text-align: center;
   }
 
-  /* Applies the glowing pulse animation to the 3 lines only on mobile */
+  /* 1. Applies the subtle neon pulse to the 3 lines */
   .header .menu-icon .navicon,
   .header .menu-icon .navicon:before,
   .header .menu-icon .navicon:after {
-    animation: mobile-menu-glow 1.5s infinite ease-in-out;
+    animation: mobile-menu-glow 2s infinite ease-in-out;
+    z-index: 2;
   }
 
-  /* Instantly stops the glow as soon as the user clicks and opens the menu */
+  /* 2. Creates the beautiful expanding radar ripple behind the icon */
+  .header .menu-icon::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(251, 16, 86, 0.4);
+    border-radius: 50%;
+    z-index: 0;
+    animation: radar-ping 2s infinite ease-out;
+  }
+
+  /* 3. Instantly kills ALL animations the exact second they open the menu */
   .header .menu-btn:checked ~ .menu-icon .navicon,
   .header .menu-btn:checked ~ .menu-icon .navicon:before,
   .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    animation: none;
+  }
+  .header .menu-btn:checked ~ .menu-icon::before {
+    display: none;
     animation: none;
   }
 }
