@@ -10,29 +10,24 @@ import { Fade } from "react-reveal";
 function Education(props) {
   const theme = props.theme;
   return (
-    /* We wrap everything in a neutral div so the Header is no longer trapped */
-    <div>
+    <div className="education-main">
       <Header theme={props.theme} setTheme={props.setTheme} />
-      
-      <div className="education-main">
-        <div className="basic-education">
-          <Fade bottom duration={2000} distance="40px">
-            <div className="heading-div">
-              <div className="heading-img-div">
-                <EducationImg theme={theme} />
-              </div>
-              <div className="heading-text-div">
-                <h1 className="heading-text" style={{ color: theme.text }}>
-                  Education
-                </h1>
-              </div>
+      <div className="basic-education">
+        <Fade bottom duration={2000} distance="40px">
+          <div className="heading-div">
+            <div className="heading-img-div">
+              <EducationImg theme={theme} />
             </div>
-          </Fade>
-          <Educations theme={props.theme} />
-          <Certifications theme={props.theme} />
-        </div>
+            <div className="heading-text-div">
+              <h1 className="heading-text" style={{ color: theme.text }}>
+                Education
+              </h1>
+            </div>
+          </div>
+        </Fade>
+        <Educations theme={props.theme} />
+        <Certifications theme={props.theme} />
       </div>
-      
       <Footer theme={props.theme} />
     </div>
   );

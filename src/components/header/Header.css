@@ -20,8 +20,7 @@
 
 .header li a {
   display: block;
-  padding: 10px 20px;
-  /* color: black; */
+  padding: 10px 12px; /* Reduced from 20px to 12px to give your long names room to breathe */
   text-decoration: none;
 }
 
@@ -39,7 +38,6 @@
   font-weight: bold;
   padding: 0 10px;
   letter-spacing: 3px;
-  /* color: #55198b; */
 }
 
 /* menu */
@@ -194,6 +192,10 @@
   }
   .header .menu {
     max-height: none;
+    /* ADDED: This Flexbox rule physically locks the menu items and Moon button onto one straight line */
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
   }
   .header .menu-icon {
     display: none;
