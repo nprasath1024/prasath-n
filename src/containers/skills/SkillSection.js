@@ -9,13 +9,15 @@ function SkillSection(props) {
 
   // This function scans your bullet points for the tools and applies the glowing CSS class
   const highlightText = (text) => {
-    // Ordered longest to shortest so tools like "Microsoft SQL Server" don't get accidentally chopped by "SQL Server"
+    // Ordered longest to shortest so tools don't get accidentally chopped
     const keywords = [
       "SQL Server Management Studio (SSMS)",
       "HP Quality Center (ALM)",
       "Guidewire ClaimCenter",
       "Microsoft SQL Server",
       "Informatica PowerCenter",
+      "code release activities",
+      "ETL reconciliation",
       "PowerExchange",
       "Visual Studio Code",
       "Agile methodology",
@@ -44,7 +46,7 @@ function SkillSection(props) {
       "Git"
     ];
     
-    // Fixed: Properly escapes characters and creates an 'OR' list for the search
+    // Properly escapes characters and creates an 'OR' list for the search
     const escapedKeywords = keywords.map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
     const regex = new RegExp(`(${escapedKeywords.join('|')})`, 'gi');
     
@@ -84,7 +86,6 @@ function SkillSection(props) {
               )}
 
               <Fade right duration={2000}>
-                {/* Changed marginTop from 20px to 40px to create 1-2 lines of space below the heading */}
                 <div style={{ marginTop: "40px" }}>
                   {skill.skills.map((skillSentence, i) => {
                     return (
