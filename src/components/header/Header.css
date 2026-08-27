@@ -192,8 +192,20 @@
   color: #ffffff !important;
 }
 
-/* 48em = 768px */
+/* --- THE NEW GLOWING ANIMATION --- */
+@keyframes mobile-menu-glow {
+  0% {
+    box-shadow: 0 0 2px #fb1056;
+  }
+  50% {
+    box-shadow: 0 0 12px #fb1056, 0 0 18px #fb1056;
+  }
+  100% {
+    box-shadow: 0 0 2px #fb1056;
+  }
+}
 
+/* 48em = 768px */
 @media (min-width: 48em) {
   .header li {
     float: left;
@@ -205,10 +217,10 @@
   }
   .header .menu {
     max-height: none;
-    order: 2; /* Keeps the navigation links perfectly centered */
+    order: 2;
   }
   .theme-toggle-btn {
-    order: 3; /* Pushes the theme toggle to the far right side of the screen */
+    order: 3;
   }
   .header .menu-icon {
     display: none;
@@ -225,7 +237,6 @@
     line-height: normal;
   }
   
-  /* FIXED: Floats the toggle button next to the hamburger menu on mobile */
   .theme-toggle-btn {
     float: right;
     margin-top: 15px;
@@ -236,7 +247,22 @@
     padding-top: 10px;
     text-align: center;
   }
+
+  /* Applies the glowing pulse animation to the 3 lines only on mobile */
+  .header .menu-icon .navicon,
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    animation: mobile-menu-glow 1.5s infinite ease-in-out;
+  }
+
+  /* Instantly stops the glow as soon as the user clicks and opens the menu */
+  .header .menu-btn:checked ~ .menu-icon .navicon,
+  .header .menu-btn:checked ~ .menu-icon .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    animation: none;
+  }
 }
+
 @media (max-width: 960px) and (min-width: 768px) {
   .header {
     font-size: 12px;
