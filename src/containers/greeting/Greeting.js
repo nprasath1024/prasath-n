@@ -44,7 +44,7 @@ export default function Greeting(props) {
                   style={{ 
                     display: "inline-block", 
                     textDecoration: "none", 
-                    width: "260px", /* Reduced from 285px to perfectly align with the Instagram icon */
+                    width: "260px",
                     textAlign: "center", 
                     marginLeft: "0px", 
                     boxSizing: "border-box" 
@@ -59,6 +59,16 @@ export default function Greeting(props) {
             <FeelingProud theme={theme} />
           </div>
         </div>
+        
+        {/* NEW: Bouncing Scroll Indicator (Only visible on mobile via CSS) */}
+        <div className="scroll-indicator">
+          <p style={{ color: theme.secondaryText }}>Scroll Down</p>
+          <div 
+            className="scroll-indicator-arrow" 
+            style={{ borderBottomColor: theme.secondaryText, borderRightColor: theme.secondaryText }}
+          ></div>
+        </div>
+
       </div>
     </Fade>
   );

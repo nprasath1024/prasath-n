@@ -15,7 +15,6 @@
 
 .greeting-main {
   display: flex;
-  /* text-align: center; */
 }
 
 .greeting-main > * {
@@ -70,6 +69,37 @@
   cursor: pointer;
 }
 
+/* --- SCROLL INDICATOR STYLES --- */
+.scroll-indicator {
+  display: none; /* Hidden on desktop by default */
+  text-align: center;
+  margin-top: 30px;
+  animation: scroll-bounce 2s infinite;
+  opacity: 0.8;
+}
+
+.scroll-indicator p {
+  font-family: "Google Sans Regular";
+  font-size: 14px;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.scroll-indicator-arrow {
+  width: 15px;
+  height: 15px;
+  border-bottom: 3px solid;
+  border-right: 3px solid;
+  transform: rotate(45deg);
+  margin: 0 auto;
+}
+
+@keyframes scroll-bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-15px); }
+  60% { transform: translateY(-7px); }
+}
+
 /* Media Query */
 @media (max-width: 1380px) {
   .greeting-text {
@@ -84,6 +114,7 @@
     max-width: 900px;
   }
 }
+
 @media (max-width: 768px) {
   .button-greeting-div {
     justify-content: space-around;
@@ -112,5 +143,10 @@
     display: flex;
     justify-content: center;
     text-align: center;
+  }
+
+  /* NEW: Activates the scroll indicator strictly for mobile screens! */
+  .scroll-indicator {
+    display: block;
   }
 }
