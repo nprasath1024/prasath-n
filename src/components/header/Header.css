@@ -76,7 +76,7 @@
 
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
-  background: #d90036;
+  background: #d90036; 
   content: "";
   display: block;
   height: 100%;
@@ -210,17 +210,18 @@
   100% { opacity: 0.7; }
 }
 
-/* FIXED: Changed to a recurring shake that happens every few seconds */
-@keyframes recurring-attention-shake {
-  0%, 15%, 100% { transform: rotate(0deg) scale(1); }
-  3%, 9% { transform: rotate(-15deg) scale(1.2); }
-  6%, 12% { transform: rotate(15deg) scale(1.2); }
+@keyframes initial-attention-shake {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  20%, 60% { transform: rotate(-15deg) scale(1.2); }
+  40%, 80% { transform: rotate(15deg) scale(1.2); }
 }
 
-/* 48em = 768px */
+/* ============================================================== */
+/* DESKTOP FIXES (Strict Flexbox to stop line-breaking)           */
+/* ============================================================== */
 @media (min-width: 48em) {
   .header li {
-    float: left;
+    float: none; /* Removed the old float method */
   }
   .header {
     display: flex;
@@ -230,15 +231,26 @@
   .header .menu {
     max-height: none;
     order: 2;
+    display: flex; /* NEW: Forces menu into a strict row */
+    flex-wrap: nowrap; /* NEW: Prevents items from dropping to a new line */
+    align-items: center;
+  }
+  .header li a {
+    white-space: nowrap; /* NEW: Stops the text from breaking inside the buttons */
+    padding: 10px 12px; /* NEW: Slightly reduced gap to fit the long names */
   }
   .theme-toggle-btn {
     order: 3;
+    flex-shrink: 0; /* Prevents the dark mode icon from being squished */
   }
   .header .menu-icon {
     display: none;
   }
 }
 
+/* ============================================================== */
+/* MOBILE STYLES (100% UNTOUCHED)                                 */
+/* ============================================================== */
 @media (max-width: 768px) {
   .header .logo {
     display: block;
@@ -260,10 +272,9 @@
     text-align: center;
   }
 
-  /* FIXED: Set to infinite and stretched over 6 seconds so it pauses between shakes! */
   .header .menu-icon {
-    animation: recurring-attention-shake 6s ease-in-out infinite;
-    animation-delay: 1.5s;
+    animation: initial-attention-shake 1s ease-in-out 1;
+    animation-delay: 1.5s; 
     transform-origin: center;
   }
 
@@ -301,7 +312,6 @@
     animation: text-pulse 2s infinite ease-in-out;
   }
 
-  /* Kills ALL animations instantly when the user taps to open the menu */
   .header .menu-btn:checked ~ .menu-icon {
     animation: none;
   }
@@ -317,8 +327,16 @@
   }
 }
 
-@media (max-width: 960px) and (min-width: 768px) {
-  .header {
-    font-size: 12px;
+/* ============================================================== */
+/* TABLET / LAPTOP SCALING (Kicks in when window gets smaller)    */
+/* ============================================================== */
+@media (max-width: 1300px) and (min-width: 768px) {
+  .header li a {
+    padding: 10px 8px; /* Tightens the spacing when the window shrinks */
+    font-size: 13px; /* Scales the font down slightly to ensure it fits */
+  }
+  .header .logo-name {
+    letter-spacing: 1px;
+    font-size: 20px;
   }
 }
