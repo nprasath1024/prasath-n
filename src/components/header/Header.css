@@ -3,9 +3,9 @@
 .header {
   display: block;
   width: 100vw;
-  max-width: 95%;
+  max-width: 100%;
   box-sizing: border-box; 
-  padding: 20px 10%; 
+  padding: 20px 5%; 
   margin: -10px auto;
 }
 
@@ -13,7 +13,8 @@
   margin: 0;
   padding: 10px;
   list-style: none;
-  overflow: hidden;
+  /* Baseline mobile overflow rule */
+  overflow: hidden; 
 }
 
 .grey-color {
@@ -219,7 +220,7 @@
 }
 
 /* ============================================================== */
-/* DESKTOP FIXES (Strict Grouping for Windows/Mac Consistency)    */
+/* DESKTOP FIXES (Flawless Windows/Mac Consistency)               */
 /* ============================================================== */
 @media (min-width: 48em) {
   .header li {
@@ -228,10 +229,9 @@
   .header {
     display: flex;
     align-items: center;
-    /* Removed space-between so the layout doesn't break apart on wide Windows monitors */
   }
   .header .logo {
-    margin-right: auto; /* THIS FIXES IT: Forces the Logo left, and pushes everything else right */
+    flex-shrink: 0; 
   }
   .header .menu {
     max-height: none;
@@ -239,16 +239,18 @@
     display: flex; 
     flex-wrap: nowrap; 
     align-items: center;
-    margin-right: 30px; /* Locks an exact distance between the Menu and Toggle Icon */
+    margin-left: auto; /* FIXED: Pushes the Menu and Toggle Button permanently to the far right */
+    margin-right: 20px; /* FIXED: Locks the gap between the Menu and Toggle */
+    overflow: visible; /* FIXED: Absolutely prevents "Contact and Resume" from being cropped/hidden */
   }
   .header li a {
     white-space: nowrap; 
     padding: 10px 18px; 
-    font-size: 18px; 
+    font-size: 17px; 
   }
   .theme-toggle-btn {
     order: 3;
-    flex-shrink: 0; 
+    flex-shrink: 0; /* Prevents the Toggle from squishing */
   }
   .header .menu-icon {
     display: none;
@@ -335,22 +337,20 @@
 }
 
 /* ============================================================== */
-/* TABLET / LAPTOP SCALING (Kicks in ONLY when window shrinks)    */
+/* TABLET / LAPTOP SCALING (Math-calculated to prevent overlap)   */
 /* ============================================================== */
 @media (max-width: 1450px) and (min-width: 768px) {
   .header {
-    padding: 20px 3%; 
-  }
-  .header li a {
-    padding: 10px 8px; 
-    font-size: 14px; 
-  }
-  .header .logo-name {
-    letter-spacing: 1px;
-    font-size: 22px;
-    padding: 0 5px;
+    padding: 20px 2%; 
   }
   .header .menu {
-    margin-right: 15px; /* Shrinks the gap between menu and toggle on smaller laptops */
+    margin-right: 10px; 
+  }
+  .header li a {
+    padding: 10px 6px; 
+    font-size: 13px; /* Scales down smoothly for medium laptops so it doesn't crash into the logo */
+  }
+  .header .logo-name {
+    font-size: 20px;
   }
 }
