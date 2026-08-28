@@ -3,7 +3,7 @@
 .header {
   display: block;
   width: 100%;
-  max-width: 98%; /* Expanded to give maximum room */
+  max-width: 95%; /* RESTORED: Keeps the layout border perfectly aligned with the page */
   padding: 20px 10px;
   margin: -10px auto;
 }
@@ -39,7 +39,7 @@
   font-weight: bold;
   padding: 0 10px;
   letter-spacing: 3px;
-  white-space: nowrap; /* FIXED: Prevents "Prasath N" from breaking into two lines */
+  white-space: nowrap; 
 }
 
 /* menu */
@@ -211,10 +211,10 @@
   100% { opacity: 0.7; }
 }
 
-@keyframes initial-attention-shake {
-  0%, 100% { transform: rotate(0deg) scale(1); }
-  20%, 60% { transform: rotate(-15deg) scale(1.2); }
-  40%, 80% { transform: rotate(15deg) scale(1.2); }
+@keyframes recurring-attention-shake {
+  0%, 15%, 100% { transform: rotate(0deg) scale(1); }
+  3%, 9% { transform: rotate(-15deg) scale(1.2); }
+  6%, 12% { transform: rotate(15deg) scale(1.2); }
 }
 
 /* ============================================================== */
@@ -228,7 +228,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 100%; /* FIXED: Stretches the header border out completely */
   }
   .header .menu {
     max-height: none;
@@ -236,18 +235,18 @@
     display: flex; 
     flex-wrap: nowrap; 
     align-items: center;
-    justify-content: flex-end; /* Pushes the menu items toward the right side */
-    flex: 1; /* Tells the menu to take up all the free space */
-    padding-right: 20px; /* Creates a solid buffer zone so it NEVER touches the button */
+    justify-content: flex-end; 
+    flex: 1; 
+    padding-right: 20px; 
   }
   .header li a {
     white-space: nowrap; 
-    padding: 10px 12px; 
+    padding: 10px 20px; /* RESTORED: Brings back the beautiful wide spacing for full screens */
   }
   .theme-toggle-btn {
     order: 3;
     flex-shrink: 0; 
-    margin-left: 10px; /* Forces a permanent gap between the menu and the button */
+    margin-left: 10px; 
   }
   .header .menu-icon {
     display: none;
@@ -279,7 +278,7 @@
   }
 
   .header .menu-icon {
-    animation: initial-attention-shake 1s ease-in-out 1;
+    animation: recurring-attention-shake 6s ease-in-out infinite;
     animation-delay: 1.5s; 
     transform-origin: center;
   }
@@ -334,15 +333,16 @@
 }
 
 /* ============================================================== */
-/* TABLET / LAPTOP SCALING (Kicks in when window gets smaller)    */
+/* TABLET / LAPTOP SCALING (Kicks in ONLY when window shrinks)    */
 /* ============================================================== */
 @media (max-width: 1300px) and (min-width: 768px) {
   .header {
-    padding: 20px 5px; /* Reclaims edge space */
+    padding: 20px 5px; 
+    max-width: 98%; /* Gives it just a tiny bit more room before breaking */
   }
   .header li a {
-    padding: 10px 4px; /* Squeezes the buttons tightly together */
-    font-size: 11.5px; /* FIXED: Scales the text down aggressively so it physically fits */
+    padding: 10px 6px; /* Aggressively shrinks spacing here so it fits */
+    font-size: 11.5px; 
   }
   .header .logo-name {
     letter-spacing: 1px;
