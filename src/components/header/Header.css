@@ -13,8 +13,7 @@
   margin: 0;
   padding: 10px;
   list-style: none;
-  /* Baseline mobile overflow rule */
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .grey-color {
@@ -220,7 +219,7 @@
 }
 
 /* ============================================================== */
-/* DESKTOP FIXES (Flawless Windows/Mac Consistency)               */
+/* DESKTOP FIXES                                                  */
 /* ============================================================== */
 @media (min-width: 48em) {
   .header li {
@@ -239,18 +238,18 @@
     display: flex; 
     flex-wrap: nowrap; 
     align-items: center;
-    margin-left: auto; /* FIXED: Pushes the Menu and Toggle Button permanently to the far right */
-    margin-right: 20px; /* FIXED: Locks the gap between the Menu and Toggle */
-    overflow: visible; /* FIXED: Absolutely prevents "Contact and Resume" from being cropped/hidden */
+    margin-left: auto; 
+    margin-right: 20px; 
+    overflow: visible; 
   }
   .header li a {
     white-space: nowrap; 
-    padding: 10px 18px; 
-    font-size: 17px; 
+    padding: 10px 14px; /* Reduced padding to safely fit the larger text */
+    font-size: 19px; /* Increased menu font size */
   }
   .theme-toggle-btn {
     order: 3;
-    flex-shrink: 0; /* Prevents the Toggle from squishing */
+    flex-shrink: 0; 
   }
   .header .menu-icon {
     display: none;
@@ -337,7 +336,7 @@
 }
 
 /* ============================================================== */
-/* TABLET / LAPTOP SCALING (Math-calculated to prevent overlap)   */
+/* TABLET / LAPTOP SCALING                                        */
 /* ============================================================== */
 @media (max-width: 1450px) and (min-width: 768px) {
   .header {
@@ -347,8 +346,8 @@
     margin-right: 10px; 
   }
   .header li a {
-    padding: 10px 6px; 
-    font-size: 13px; /* Scales down smoothly for medium laptops so it doesn't crash into the logo */
+    padding: 10px 8px; /* Slightly wider padding for medium screens */
+    font-size: 15px; /* Increased from 13px */
   }
   .header .logo-name {
     font-size: 20px;
