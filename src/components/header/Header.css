@@ -24,7 +24,6 @@
   display: block;
   padding: 10px 20px;
   text-decoration: none;
-  font-size: 18px; /* FIXED: Explicitly forces the text to be large and readable */
 }
 
 .header .logo {
@@ -220,7 +219,7 @@
 }
 
 /* ============================================================== */
-/* DESKTOP FIXES (Strict Flexbox with 100vw locking)              */
+/* DESKTOP FIXES (Strict Layout to Fix Big Screen Gaps)           */
 /* ============================================================== */
 @media (min-width: 48em) {
   .header li {
@@ -229,8 +228,9 @@
   .header {
     display: flex;
     align-items: center;
-    /* This automatically spaces the Logo (left), Menu (center), and Button (right) */
-    justify-content: space-between; 
+  }
+  .header .logo {
+    margin-right: auto; /* FIXED: Tells the Logo to push the Menu to the right side */
   }
   .header .menu {
     max-height: none;
@@ -238,12 +238,12 @@
     display: flex; 
     flex-wrap: nowrap; 
     align-items: center;
-    /* FIXED: Removed the right-alignment so it naturally perfectly centers on the screen */
+    margin-right: 30px; /* FIXED: Locks a precise 30px gap between the Menu and the Moon/Sun icon */
   }
   .header li a {
     white-space: nowrap; 
-    padding: 10px 18px; 
-    font-size: 18px; /* FIXED: Ensures the text stays beautifully large */
+    padding: 10px 20px; 
+    font-size: 20px; /* FIXED: Increased the menu font size so it's large and clear */
   }
   .theme-toggle-btn {
     order: 3;
@@ -336,17 +336,18 @@
 /* ============================================================== */
 /* TABLET / LAPTOP SCALING (Kicks in ONLY when window shrinks)    */
 /* ============================================================== */
-@media (max-width: 1300px) and (min-width: 768px) {
+@media (max-width: 1450px) and (min-width: 768px) {
+  /* FIXED: Adjusted threshold to 1450px so the larger font size never forces a line break! */
   .header {
     padding: 20px 3%; 
   }
   .header li a {
-    padding: 10px 6px; 
-    font-size: 13px; /* Scales down smoothly for medium screens */
+    padding: 10px 8px; 
+    font-size: 14px; /* Scaled up slightly for medium screens */
   }
   .header .logo-name {
     letter-spacing: 1px;
-    font-size: 20px;
+    font-size: 22px;
     padding: 0 5px;
   }
 }
