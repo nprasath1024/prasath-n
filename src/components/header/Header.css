@@ -2,9 +2,11 @@
 
 .header {
   display: block;
-  width: 100%;
-  max-width: 95%; /* RESTORED: Keeps the layout border perfectly aligned with the page */
-  padding: 20px 10px;
+  /* THE FIX: Applying the bulletproof 100vw rule from the Education section! */
+  width: 100vw;
+  max-width: 100%;
+  box-sizing: border-box; /* Stops padding from breaking the width */
+  padding: 20px 5%; /* Fluid padding to always keep perfect distance from the edges */
   margin: -10px auto;
 }
 
@@ -218,7 +220,7 @@
 }
 
 /* ============================================================== */
-/* DESKTOP FIXES (Strict Flexbox to stop line-breaking)           */
+/* DESKTOP FIXES (Strict Flexbox with 100vw locking)              */
 /* ============================================================== */
 @media (min-width: 48em) {
   .header li {
@@ -237,11 +239,11 @@
     align-items: center;
     justify-content: flex-end; 
     flex: 1; 
-    padding-right: 20px; 
+    padding-right: 2vw; /* Fluid gap using viewport width */
   }
   .header li a {
     white-space: nowrap; 
-    padding: 10px 20px; /* RESTORED: Brings back the beautiful wide spacing for full screens */
+    padding: 10px 1.5vw; /* Fluid spacing so buttons adapt to the screen */
   }
   .theme-toggle-btn {
     order: 3;
@@ -336,12 +338,8 @@
 /* TABLET / LAPTOP SCALING (Kicks in ONLY when window shrinks)    */
 /* ============================================================== */
 @media (max-width: 1300px) and (min-width: 768px) {
-  .header {
-    padding: 20px 5px; 
-    max-width: 98%; /* Gives it just a tiny bit more room before breaking */
-  }
   .header li a {
-    padding: 10px 6px; /* Aggressively shrinks spacing here so it fits */
+    padding: 10px 4px; /* Aggressively shrinks spacing here so it fits */
     font-size: 11.5px; 
   }
   .header .logo-name {
