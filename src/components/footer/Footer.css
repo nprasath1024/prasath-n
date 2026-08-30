@@ -1,10 +1,29 @@
 .footer-text {
   text-align: center;
-  /* color: #868e96; */
   font-weight: bold;
   font-family: "Google Sans Regular";
 }
 
 .footer-div {
   margin-top: 2rem;
+}
+
+/* Hide the mobile text completely on desktop */
+.show-on-mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Hide the default "Made with love" text ONLY if on the home page */
+  .hide-on-mobile {
+    display: none;
+  }
+  
+  /* Reveal the new menu navigation prompt */
+  .show-on-mobile-only {
+    display: block;
+    font-size: 14px;
+    padding: 0 15px;
+    line-height: 1.5;
+  }
 }

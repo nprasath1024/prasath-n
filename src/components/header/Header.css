@@ -13,7 +13,7 @@
   margin: 0;
   padding: 10px;
   list-style: none;
-  overflow: hidden;
+  overflow: hidden; 
 }
 
 .grey-color {
@@ -219,7 +219,7 @@
 }
 
 /* ============================================================== */
-/* DESKTOP FIXES                                                  */
+/* DESKTOP FIXES (Increased Font Size + Reduced Padding)          */
 /* ============================================================== */
 @media (min-width: 48em) {
   .header li {
@@ -230,6 +230,7 @@
     align-items: center;
   }
   .header .logo {
+    margin-right: auto; 
     flex-shrink: 0; 
   }
   .header .menu {
@@ -244,8 +245,8 @@
   }
   .header li a {
     white-space: nowrap; 
-    padding: 10px 14px; /* Reduced padding to safely fit the larger text */
-    font-size: 19px; /* Increased menu font size */
+    padding: 10px 14px; /* Reduced padding slightly to offset larger font */
+    font-size: 19px; /* Increased font size */
   }
   .theme-toggle-btn {
     order: 3;
@@ -346,8 +347,8 @@
     margin-right: 10px; 
   }
   .header li a {
-    padding: 10px 8px; /* Slightly wider padding for medium screens */
-    font-size: 15px; /* Increased from 13px */
+    padding: 10px 6px; 
+    font-size: 13px; 
   }
   .header .logo-name {
     font-size: 20px;

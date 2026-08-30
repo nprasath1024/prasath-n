@@ -41,7 +41,6 @@
   white-space: normal;
   line-height: 1.2;
   text-overflow: ellipsis;
-  color: rgb(36, 41, 46);
   font-family: "Google Sans Regular";
   margin-bottom: 0.75rem;
   font-size: 25px;
@@ -49,17 +48,9 @@
   margin: 0px;
 }
 
-.project-title-glow {
-  color: #ffffff !important;
-  text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.4);
-}
-
-.repo-star-svg {
-  margin-right: 0.3rem;
-}
-
+/* Decreased desktop font size */
 .repo-description {
-  font-size: 22px; /* DESKTOP FONT SIZE */
+  font-size: 18px; 
   word-wrap: break-word;
   text-align: justify;
   display: block; 
@@ -87,7 +78,7 @@
   }
   
   .repo-description {
-    font-size: 16px; /* MOBILE FONT SIZE */
+    font-size: 16px;
   }
   
   .repo-details {

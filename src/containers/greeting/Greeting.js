@@ -53,16 +53,6 @@ export default function Greeting(props) {
                   <i className="fa fa-download" aria-hidden="true"></i> vCard
                 </a>
               </div>
-              
-              {/* THE SMART FIX: Moved the scroll indicator HERE, above the image! */}
-              <div className="scroll-indicator">
-                <p style={{ color: theme.secondaryText }}>Scroll Down</p>
-                <div 
-                  className="scroll-indicator-arrow" 
-                  style={{ borderBottomColor: theme.secondaryText, borderRightColor: theme.secondaryText }}
-                ></div>
-              </div>
-
             </div>
           </div>
           <div className="greeting-image-div">
