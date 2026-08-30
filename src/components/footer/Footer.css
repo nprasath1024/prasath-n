@@ -13,17 +13,23 @@
   display: none;
 }
 
+/* Professional slow fade-in/fade-out animation */
+@keyframes professional-blink {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
 @media (max-width: 768px) {
-  /* Hide the default "Made with love" text ONLY if on the home page */
   .hide-on-mobile {
     display: none;
   }
   
-  /* Reveal the new menu navigation prompt */
   .show-on-mobile-only {
     display: block;
     font-size: 14px;
     padding: 0 15px;
     line-height: 1.5;
+    animation: professional-blink 2.5s infinite ease-in-out; /* Highlights text professionally */
   }
 }

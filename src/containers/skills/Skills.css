@@ -3,13 +3,12 @@
 }
 
 .skills-header {
-  font-size: 60px;
+  font-size: 45px; /* Decreased from 60px */
   line-height: 1.1;
   font-family: "Google Sans Regular";
   text-align: center;
 }
 
-/* Decreased desktop font size */
 .skills-text {
   font-size: 19px !important; 
 }
@@ -33,7 +32,7 @@
 }
 
 .skills-heading {
-  font-size: 50px;
+  font-size: 38px; /* Decreased from 50px */
   font-weight: 400;
   text-align: center;
   padding-bottom: 10px;
@@ -49,10 +48,10 @@
 /* Media Query for Mobile */
 @media (max-width: 1380px) {
   .skills-heading {
-    font-size: 40px;
+    font-size: 35px;
   }
   .skills-header {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 @media (max-width: 768px) {

@@ -11,23 +11,24 @@ export default function Footer(props) {
   return (
     <div className="footer-div">
       <Fade>
-        {/* Default footer: Shows everywhere on Desktop, but hides on Home for Mobile */}
-        <p 
-          className={`footer-text ${isHomePage ? "hide-on-mobile" : ""}`} 
-          style={{ color: props.theme.secondaryText }}
-        >
-          Made with <span role="img">❤️</span> by {greeting.title2}
-        </p>
-
-        {/* Custom footer: ONLY shows on Mobile and ONLY on the Home page */}
-        {isHomePage && (
+        {/* THE FIX: Wrapped both paragraphs in a single <div> so <Fade> doesn't crash on other pages */}
+        <div>
           <p 
-            className="footer-text show-on-mobile-only" 
+            className={`footer-text ${isHomePage ? "hide-on-mobile" : ""}`} 
             style={{ color: props.theme.secondaryText }}
           >
-            Tap the menu icon above to explore other sections.
+            Made with <span role="img">❤️</span> by {greeting.title2}
           </p>
-        )}
+
+          {isHomePage && (
+            <p 
+              className="footer-text show-on-mobile-only" 
+              style={{ color: props.theme.secondaryText }}
+            >
+              Tap the menu icon above to explore other sections.
+            </p>
+          )}
+        </div>
       </Fade>
     </div>
   );
