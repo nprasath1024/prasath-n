@@ -160,7 +160,7 @@
 }
 
 /* ============================================================== */
-/* DESKTOP FIXES (Fixed Font & Spacing for Windows Scale)         */
+/* DESKTOP FIXES (Fluid Sizing & Stable Layout)                   */
 /* ============================================================== */
 @media (min-width: 48em) {
   .header li {
@@ -171,7 +171,7 @@
     align-items: center;
   }
   .header .logo {
-    margin-right: auto; 
+    margin-right: auto; /* Pushes the menu to the right securely */
     flex-shrink: 0; 
   }
   .header .menu {
@@ -180,14 +180,12 @@
     display: flex; 
     flex-wrap: nowrap; 
     align-items: center;
-    margin-left: auto; 
-    margin-right: 20px; 
-    overflow: visible; 
+    margin-right: 15px; /* Locked margin before the toggle button */
   }
   .header li a {
     white-space: nowrap; 
-    padding: 10px 14px; 
-    font-size: 18px; /* Locked large font size for desktop */
+    padding: 10px 1.2vw; /* FLUID PADDING: Adapts perfectly without causing overflow */
+    font-size: 16px; /* REDUCED: Safely fits inside 100vw on all desktop monitors */
   }
   .theme-toggle-btn {
     order: 3;
@@ -271,18 +269,15 @@
 }
 
 /* ============================================================== */
-/* TABLET SCALING (Adjusted threshold down to 1100px for Windows) */
+/* TABLET / LAPTOP SCALING (Safeguard for 1200px Windows Screens) */
 /* ============================================================== */
-@media (max-width: 1100px) and (min-width: 768px) {
+@media (max-width: 1200px) and (min-width: 768px) {
   .header {
     padding: 20px 2%; 
   }
-  .header .menu {
-    margin-right: 10px; 
-  }
   .header li a {
-    padding: 10px 8px; 
-    font-size: 15px; /* Increased fallback size for smaller laptops */
+    padding: 10px 8px; /* Tighter padding for compact laptops */
+    font-size: 13px; /* Smaller font to ensure all text fits without horizontal scrolling */
   }
   .header .logo-name {
     font-size: 20px;
