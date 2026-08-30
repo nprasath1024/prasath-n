@@ -13,11 +13,20 @@
   display: none;
 }
 
-/* Professional slow fade-in/fade-out animation */
+/* Professional slow pulse with a dynamic text-shadow glow */
 @keyframes professional-blink {
-  0% { opacity: 0.3; }
-  50% { opacity: 1; }
-  100% { opacity: 0.3; }
+  0% { 
+    opacity: 0.6; 
+    text-shadow: 0 0 0px transparent; 
+  }
+  50% { 
+    opacity: 1; 
+    text-shadow: 0 0 8px currentColor; /* Automatically glows in the current text color */
+  }
+  100% { 
+    opacity: 0.6; 
+    text-shadow: 0 0 0px transparent; 
+  }
 }
 
 @media (max-width: 768px) {
@@ -30,6 +39,6 @@
     font-size: 14px;
     padding: 0 15px;
     line-height: 1.5;
-    animation: professional-blink 2.5s infinite ease-in-out; /* Highlights text professionally */
+    animation: professional-blink 2.5s infinite ease-in-out;
   }
 }
