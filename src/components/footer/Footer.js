@@ -11,7 +11,6 @@ export default function Footer(props) {
   return (
     <div className="footer-div">
       <Fade>
-        {/* THE FIX: Wrapped both paragraphs in a single <div> so <Fade> doesn't crash on other pages */}
         <div>
           <p 
             className={`footer-text ${isHomePage ? "hide-on-mobile" : ""}`} 
@@ -25,7 +24,7 @@ export default function Footer(props) {
               className="footer-text show-on-mobile-only" 
               style={{ color: props.theme.secondaryText }}
             >
-              Tap the menu icon above to explore other sections.
+              Use the menu at the top of the page to explore other sections.
             </p>
           )}
         </div>

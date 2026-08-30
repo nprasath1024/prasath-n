@@ -160,7 +160,7 @@
 }
 
 /* ============================================================== */
-/* DESKTOP FIXES (Strict Size Reduction & Rigid Spacing)          */
+/* DESKTOP FIXES (15px Font Size & Rigid Spacing)                 */
 /* ============================================================== */
 @media (min-width: 48em) {
   .header li {
@@ -180,13 +180,13 @@
     display: flex; 
     flex-wrap: nowrap; 
     align-items: center;
-    margin-right: 25px; /* Locked margin before the toggle button */
-    overflow: visible; /* Prevents cropping */
+    margin-right: 25px; 
+    overflow: visible; 
   }
   .header li a {
     white-space: nowrap; 
-    padding: 10px 12px; /* Rigid padding prevents unexpected stretching */
-    font-size: 14px; /* Safely reduced font size */
+    padding: 10px 12px; 
+    font-size: 15px; /* Safely increased back up slightly */
   }
   .theme-toggle-btn {
     order: 3;
@@ -278,7 +278,7 @@
   }
   .header li a {
     padding: 10px 6px; 
-    font-size: 12px; /* Super safe fallback for smaller laptops */
+    font-size: 13px; /* Scales down to 13px safely on smaller laptops */
   }
   .header .logo-name {
     font-size: 18px;
