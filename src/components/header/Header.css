@@ -197,12 +197,12 @@
     display: none;
   }
   .mobile-spotlight-overlay {
-    display: none !important; /* Strictly prevents the overlay from ever showing on desktop */
+    display: none !important; 
   }
 }
 
 /* ============================================================== */
-/* MOBILE STYLES & SPOTLIGHT (100% UNTOUCHED MENU LOGIC)          */
+/* MOBILE STYLES & SPOTLIGHT                                      */
 /* ============================================================== */
 @media (max-width: 768px) {
   .header .logo {
@@ -229,7 +229,7 @@
     animation: recurring-attention-shake 6s ease-in-out infinite;
     animation-delay: 1.5s; 
     transform-origin: center;
-    z-index: 10000; /* Lifts the actual menu button ABOVE the dark spotlight overlay */
+    z-index: 10000; 
   }
 
   .header .menu-icon .navicon,
@@ -290,7 +290,7 @@
   .mobile-spotlight-content {
     position: absolute;
     top: 80px; 
-    right: 25px;
+    right: 90px; /* FIXED: Shifted the arrow 65px left so it perfectly aligns with the menu icon */
     text-align: right;
     display: flex;
     flex-direction: column;
