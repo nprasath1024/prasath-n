@@ -281,9 +281,9 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7); 
-    backdrop-filter: blur(6px); /* FIX 1: Frosted glass blurs the "Hello" text behind it */
-    -webkit-backdrop-filter: blur(6px);
+    background-color: rgba(0, 0, 0, 0.8); /* Darkened slightly to make the blur punchier */
+    backdrop-filter: blur(10px); /* INCREASED: Completely blurs out all text and images behind the overlay */
+    -webkit-backdrop-filter: blur(10px);
     z-index: 9999; 
     cursor: pointer;
     animation: spotlightFadeInOut 6s forwards;
@@ -304,14 +304,14 @@
     font-size: 50px;
     font-weight: bold;
     line-height: 1;
-    margin-right: 15px; /* Aligns precisely over the tooltip */
+    margin-right: 15px; 
     text-shadow: 0px 0px 15px rgba(217, 0, 54, 0.8);
     animation: arrowBounce 1s infinite ease-in-out alternate;
   }
 
   .mobile-spotlight-content p {
     color: #ffffff;
-    background-color: #292c3f; /* FIX 2: Dark premium tooltip bubble physically blocks text clash */
+    background-color: #292c3f; 
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 12px 18px;
     border-radius: 12px;
