@@ -35,16 +35,16 @@ function Header(props) {
 
   const [currTheme, setCurrTheme] = useState(props.theme);
   
-  // Mobile Onboarding Logic (Fires strictly ONCE ever using localStorage)
+  // FIXED: Reverted back to sessionStorage so the arrow shows once per new tab/session
   const isHomePage = window.location.hash === "#/home" || window.location.hash === "#/" || window.location.hash === "";
   const [showSpotlight, setShowSpotlight] = useState(false);
 
   useEffect(() => {
-    const hasSeenSpotlight = localStorage.getItem("portfolioSpotlightSeen");
+    const hasSeenSpotlight = sessionStorage.getItem("portfolioSpotlightSeen");
     
     if (isHomePage && !hasSeenSpotlight) {
       setShowSpotlight(true);
-      localStorage.setItem("portfolioSpotlightSeen", "true"); 
+      sessionStorage.setItem("portfolioSpotlightSeen", "true"); 
       
       const timer = setTimeout(() => {
         setShowSpotlight(false);
@@ -133,7 +133,6 @@ function Header(props) {
             </li>
           </ul>
 
-          {/* MOBILE ONBOARDING SPOTLIGHT OVERLAY */}
           {showSpotlight && isHomePage && (
             <div className="mobile-spotlight-overlay" onClick={() => setShowSpotlight(false)}>
               <div className="mobile-spotlight-content">
