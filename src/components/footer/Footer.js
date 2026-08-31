@@ -5,7 +5,6 @@ import { greeting } from "../../portfolio.js";
 /* eslint-disable jsx-a11y/accessible-emoji */
 
 export default function Footer(props) {
-  // Checks if the user is on the Home route
   const isHomePage = window.location.hash === "#/home" || window.location.hash === "#/" || window.location.hash === "";
 
   return (
@@ -16,7 +15,8 @@ export default function Footer(props) {
             className={`footer-text ${isHomePage ? "hide-on-mobile" : ""}`} 
             style={{ color: props.theme.secondaryText }}
           >
-            Made with <span role="img">❤️</span> by {greeting.title2}
+            {/* HIDDEN BACKDOOR: Clicking the heart icon now redirects you directly to the Admin UI */}
+            Made with <a href="#/admin" style={{ textDecoration: "none", color: "inherit", cursor: "default" }}><span role="img">❤️</span></a> by {greeting.title2}
           </p>
 
           {isHomePage && (

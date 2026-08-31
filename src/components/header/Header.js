@@ -35,20 +35,20 @@ function Header(props) {
 
   const [currTheme, setCurrTheme] = useState(props.theme);
   
-  // Mobile Onboarding Logic (Fires ONLY once per session)
+  // Mobile Onboarding Logic (Fires strictly ONCE ever using localStorage)
   const isHomePage = window.location.hash === "#/home" || window.location.hash === "#/" || window.location.hash === "";
   const [showSpotlight, setShowSpotlight] = useState(false);
 
   useEffect(() => {
-    const hasSeenSpotlight = sessionStorage.getItem("hasSeenSpotlight");
+    const hasSeenSpotlight = localStorage.getItem("portfolioSpotlightSeen");
     
     if (isHomePage && !hasSeenSpotlight) {
       setShowSpotlight(true);
-      sessionStorage.setItem("hasSeenSpotlight", "true"); // Locks it so it won't show again
+      localStorage.setItem("portfolioSpotlightSeen", "true"); 
       
       const timer = setTimeout(() => {
         setShowSpotlight(false);
-      }, 4000); // Reduced to 4 seconds
+      }, 4000); 
       return () => clearTimeout(timer);
     }
   }, [isHomePage]);

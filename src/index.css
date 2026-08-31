@@ -58,15 +58,17 @@ body {
 }
 
 /* ============================================================== */
-/* SCROLLBAR HIDING LOGIC (Desktop Only)                          */
+/* FORCE HIDE VERTICAL SCROLLBAR (Desktop Only)                   */
 /* ============================================================== */
 @media (min-width: 768px) {
   html, body {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none !important;  /* IE and Edge */
+    scrollbar-width: none !important;  /* Firefox */
   }
   ::-webkit-scrollbar {
-    display: none; /* Chrome, Safari and Opera */
+    display: none !important; /* Chrome, Safari and Opera */
+    width: 0 !important;
+    background: transparent !important;
   }
 }
 

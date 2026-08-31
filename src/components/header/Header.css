@@ -281,12 +281,10 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.95); /* Deepened opacity to almost solid black */
-    backdrop-filter: blur(15px); /* Increased blur radius */
-    -webkit-backdrop-filter: blur(15px);
+    background-color: rgba(15, 18, 25, 0.98); /* FIX: Almost fully solid dark wall blocks underlying text */
     z-index: 9999; 
     cursor: pointer;
-    animation: spotlightFadeInOut 4s forwards; /* Sped up to 4 seconds */
+    animation: spotlightFadeInOut 4s forwards;
   }
 
   .mobile-spotlight-content {
@@ -336,7 +334,7 @@
 }
 
 /* ============================================================== */
-/* TABLET SCALING (Intercepts 150% scaled Windows monitors)       */
+/* TABLET SCALING                                                 */
 /* ============================================================== */
 @media (max-width: 1350px) and (min-width: 768px) {
   .header {
