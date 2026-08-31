@@ -173,6 +173,7 @@
   .header .logo {
     margin-right: auto; 
     flex-shrink: 0; 
+    padding-right: 40px; /* SMART FIX: The Invisible Forcefield ensures the menu never touches your name */
   }
   .header .menu {
     max-height: none;
@@ -186,7 +187,7 @@
   .header li a {
     white-space: nowrap; 
     padding: 10px 12px; 
-    font-size: 15px; /* Safely increased back up slightly */
+    font-size: 15px; /* Kept your exact requested font size */
   }
   .theme-toggle-btn {
     order: 3;
@@ -270,15 +271,16 @@
 }
 
 /* ============================================================== */
-/* TABLET SCALING (Safeguard for 1250px Windows Screens)          */
+/* TABLET SCALING (Intercepts 150% scaled Windows monitors)       */
 /* ============================================================== */
-@media (max-width: 1250px) and (min-width: 768px) {
+@media (max-width: 1350px) and (min-width: 768px) {
+  /* SMART FIX: Raised threshold to 1350px so Windows screens are properly formatted */
   .header {
     padding: 20px 2%; 
   }
   .header li a {
     padding: 10px 6px; 
-    font-size: 13px; /* Scales down to 13px safely on smaller laptops */
+    font-size: 13px; 
   }
   .header .logo-name {
     font-size: 18px;

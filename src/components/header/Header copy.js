@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import { Fade } from "react-reveal";
 import { NavLink, Link } from "react-router-dom";
@@ -34,20 +34,6 @@ function Header(props) {
   const link = settings.isSplash ? "/splash" : "home";
 
   const [currTheme, setCurrTheme] = useState(props.theme);
-  
-  // Mobile Onboarding Logic
-  const isHomePage = window.location.hash === "#/home" || window.location.hash === "#/" || window.location.hash === "";
-  const [showSpotlight, setShowSpotlight] = useState(isHomePage);
-
-  useEffect(() => {
-    if (showSpotlight) {
-      // Auto-vanish the spotlight after 6 seconds so it never traps the user
-      const timer = setTimeout(() => {
-        setShowSpotlight(false);
-      }, 6000); 
-      return () => clearTimeout(timer);
-    }
-  }, [showSpotlight]);
 
   function changeTheme() {
     if (currTheme === "light") {
@@ -88,6 +74,7 @@ function Header(props) {
             <span style={{ color: theme.text }}></span>
           </NavLink>
           
+          {/* FIXED: Button is moved outside the <ul> menu so it doesn't get hidden on mobile */}
           <button {...styles} className="theme-toggle-btn" onClick={changeTheme}>
             {icon}
           </button>
@@ -128,17 +115,6 @@ function Header(props) {
               </NavLink>
             </li>
           </ul>
-
-          {/* MOBILE ONBOARDING SPOTLIGHT OVERLAY */}
-          {showSpotlight && isHomePage && (
-            <div className="mobile-spotlight-overlay" onClick={() => setShowSpotlight(false)}>
-              <div className="mobile-spotlight-content">
-                <div className="mobile-spotlight-arrow">↑</div>
-                <p>Tap here to explore my work!</p>
-              </div>
-            </div>
-          )}
-
         </header>
       </div>
     </Fade>
