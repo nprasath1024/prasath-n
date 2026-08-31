@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.5f21937b.css",
+    "main.css": "/static/css/main.8fa1e7df.css",
     "main.js": "/static/js/main.dadeb7ba.js",
     "static/media/fa-solid-900.svg": "/static/media/fa-solid-900.33f11e8e33e406b0dc21.svg",
     "static/media/fa-brands-400.svg": "/static/media/fa-brands-400.5f2a2f236048660df440.svg",
@@ -64,11 +64,11 @@
     "static/media/Udemy.png": "/static/media/Udemy.39aa3da61204bf298f76.png",
     "static/media/buld.jpg": "/static/media/buld.55444b9789a64f32e2e5.jpg",
     "index.html": "/index.html",
-    "main.5f21937b.css.map": "/static/css/main.5f21937b.css.map",
+    "main.8fa1e7df.css.map": "/static/css/main.8fa1e7df.css.map",
     "main.dadeb7ba.js.map": "/static/js/main.dadeb7ba.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f21937b.css",
+    "static/css/main.8fa1e7df.css",
     "static/js/main.dadeb7ba.js"
   ]
 }
