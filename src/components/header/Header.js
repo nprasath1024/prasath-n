@@ -35,19 +35,23 @@ function Header(props) {
 
   const [currTheme, setCurrTheme] = useState(props.theme);
   
-  // Mobile Onboarding Logic
+  // Mobile Onboarding Logic (Fires ONLY once per session)
   const isHomePage = window.location.hash === "#/home" || window.location.hash === "#/" || window.location.hash === "";
-  const [showSpotlight, setShowSpotlight] = useState(isHomePage);
+  const [showSpotlight, setShowSpotlight] = useState(false);
 
   useEffect(() => {
-    if (showSpotlight) {
-      // Auto-vanish the spotlight after 6 seconds so it never traps the user
+    const hasSeenSpotlight = sessionStorage.getItem("hasSeenSpotlight");
+    
+    if (isHomePage && !hasSeenSpotlight) {
+      setShowSpotlight(true);
+      sessionStorage.setItem("hasSeenSpotlight", "true"); // Locks it so it won't show again
+      
       const timer = setTimeout(() => {
         setShowSpotlight(false);
-      }, 6000); 
+      }, 4000); // Reduced to 4 seconds
       return () => clearTimeout(timer);
     }
-  }, [showSpotlight]);
+  }, [isHomePage]);
 
   function changeTheme() {
     if (currTheme === "light") {

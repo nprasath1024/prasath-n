@@ -47,7 +47,6 @@ code {
 html,
 body {
   scroll-behavior: smooth;
-  /* FIXED: Kills horizontal scrollbars entirely on Windows displays */
   overflow-x: hidden;
   max-width: 100%;
 }
@@ -57,20 +56,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+
+/* ============================================================== */
+/* SCROLLBAR HIDING LOGIC (Desktop Only)                          */
+/* ============================================================== */
+@media (min-width: 768px) {
+  html, body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  ::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
 }
-::-webkit-scrollbar-track {
-  background: #292a2d;
-}
-::-webkit-scrollbar-thumb {
-  background: #636363;
-  border-radius: 5px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
+
 /* Media Query */
 @media (max-width: 1380px) {
   html,
