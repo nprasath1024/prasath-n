@@ -6,8 +6,8 @@ import Education from "../pages/education/EducationComponent";
 import Experience from "../pages/experience/Experience";
 import Contact from "../pages/contact/ContactComponent";
 import Projects from "../pages/projects/Projects";
+/* ADDED THE IMPORT FOR YOUR NEW PAGE */
 import Specialisation from "../pages/specialisation/Specialisation"; 
-import Admin from "../pages/admin/Admin"; /* Added CMS Page Import */
 import { settings } from "../portfolio.js";
 
 export default function Main(propss) {
@@ -23,9 +23,8 @@ export default function Main(propss) {
             <Route path="/contact" render={(props) => <Contact {...props} theme={propss.theme} setTheme={propss.setTheme} />} />
             <Route path="/splash" render={(props) => <Splash {...props} theme={propss.theme} setTheme={propss.setTheme} />} />
             <Route path="/projects" render={(props) => <Projects {...props} theme={propss.theme} setTheme={propss.setTheme} />} />
+            {/* ADDED THE NEW ROUTE HERE */}
             <Route path="/specialisation" render={(props) => <Specialisation {...props} theme={propss.theme} setTheme={propss.setTheme} />} />
-            {/* Added CMS Route */}
-            <Route path="/admin" render={(props) => <Admin {...props} theme={propss.theme} setTheme={propss.setTheme} />} />
           </Switch>
         </HashRouter>
       </div>
@@ -41,9 +40,8 @@ export default function Main(propss) {
             <Route path="/education" render={(props) => <Education {...props} theme={propss.theme} setTheme={propss.setTheme} />} />
             <Route path="/contact" render={(props) => <Contact {...props} theme={propss.theme} setTheme={propss.setTheme} />} />
             <Route path="/projects" render={(props) => <Projects {...props} theme={propss.theme} setTheme={propss.setTheme} />} />
+            {/* ADDED THE NEW ROUTE HERE */}
             <Route path="/specialisation" render={(props) => <Specialisation {...props} theme={propss.theme} setTheme={propss.setTheme} />} />
-            {/* Added CMS Route */}
-            <Route path="/admin" render={(props) => <Admin {...props} theme={propss.theme} setTheme={propss.setTheme} />} />
           </Switch>
         </HashRouter>
       </div>

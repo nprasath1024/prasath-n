@@ -47,9 +47,6 @@ code {
 html,
 body {
   scroll-behavior: smooth;
-  /* FIXED: Kills horizontal scrollbars entirely on Windows displays */
-  overflow-x: hidden;
-  max-width: 100%;
 }
 body {
   margin: 0;
